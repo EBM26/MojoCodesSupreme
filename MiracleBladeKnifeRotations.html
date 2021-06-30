@@ -1,0 +1,89 @@
+<style>
+			
+			#slider{width:500px; height:500px; position:relative; background-color: #AB2531; text-align: center; border: 3px solid #E4DADF; margin: auto; border-radius: 50%;}
+			#slider img{height:350px;}
+			.slide{position:absolute; opacity: .5;}
+			.slide.active{opacity: 1 !important;}
+			.clear{clear: both;}
+			#prev, #next{ cursor:pointer; position:absolute; z-index:100; top: 210px}
+			#prev{left: 80px;}
+			#next{right: 80px;}
+			.title{color: #FFFFFF; font-family: Roboto;	font-size: 28px; font-weight: bold; text-align: center;
+				   margin-top: 20px; margin-left: 60px;}
+
+		@media only screen and (max-width: 1024px) {
+			
+			
+		}
+		</style>
+ 	<img src="https://mojonow.blob.core.windows.net/cmr/t2337/src/0aaac6d5f57b44cba29eaddcca2a4624_1.png" alt="Prev" id="prev">
+			<div id="slider">
+				<div class="slide">
+					<div class="ImageSection">
+				  		<img src="https://mojonow.blob.core.windows.net/cmr/t2337/src/3639cc78bed04fcf95cd1bfded48ca7b_1.png" alt="">
+				  	</div>
+				  	<p class="title">1 Chop & Scoop</p>
+				</div>
+				<div class="slide">
+					<div class="ImageSection">
+				  		<img src="https://mojonow.blob.core.windows.net/cmr/t2337/src/4610126c1a044730b9d7c92cf4b574d8_1.png" alt="">
+				  	</div>
+				  	<p class="title">1 Rock 'N Chef</p>
+				</div>
+				<div class="slide">
+					<div class="ImageSection">
+				  		<img src="https://mojonow.blob.core.windows.net/cmr/t2337/src/f0fa37d874344ddd8374b8b02ec2d937_1.png" alt="">
+				  	</div>
+				  	<p class="title">1 Carving</p>
+				</div>
+				
+			</div>
+			<img src="https://mojonow.blob.core.windows.net/cmr/t2337/src/ff324290001142adb484e51b33131a92_1.png" alt="Next" id="next">
+				
+
+			<script>
+				
+		    var speed = 500;
+			var autoswitch = true;
+			var autoswitch_speed = 4000;
+			
+			$('.slide').first().addClass('active');
+			
+			$('.slide').hide();
+			
+			$('.active').show();
+			
+			$('#next').on('click', nextSlide);
+			
+			$('#prev').on('click', prevSlide);
+			
+			if(autoswitch == true){
+				setInterval(nextSlide,autoswitch_speed);
+			};
+			
+			function nextSlide(){
+				$('.active').removeClass('active').addClass('oldActive');
+				if($('.oldActive').is(':last-child')){
+					$('.slide').first().addClass('active');
+				} else {
+					$('.oldActive').next().addClass('active');
+				};
+				$('.oldActive').removeClass('oldActive');
+				$('.slide').fadeOut(speed);
+				$('.active').fadeIn(speed);
+			};
+			
+			function prevSlide(){
+				$('.active').removeClass('active').addClass('oldActive');
+				if($('.oldActive').is(':first-child')){
+					$('.slide').last().addClass('active');
+				} else {
+					$('.oldActive').prev().addClass('active');
+				};
+				$('.oldActive').removeClass('oldActive');
+				$('.slide').fadeOut(speed);
+				$('.active').fadeIn(speed);
+			};
+			 
+
+			</script>

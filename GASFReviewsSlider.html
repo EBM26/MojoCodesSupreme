@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<title>GASF Reviews Slider</title>
+	<style>
+		.container{margin: 200px auto 0; overflow: visible;}
+
+
+		img{max-width: 100%;}
+		.slideDiv{box-sizing: border-box; position: relative; text-align: center;}
+		.slideP{color: #000000; font-size: 18px; font-family: 'Poppins', sans-serif; margin: 30px auto;}
+		.starsImg{max-width: 135px; margin: auto;}
+		.reviewName{font-size: 20px; font-weight: bold;}
+
+
+		/* ipad and mobile styling rules */
+		@media only screen and (max-width: 1099px) {
+			.container{width: auto;  margin: 80px auto 0;}
+			.slideP{font-size: 16px;}
+		}
+		
+		/* mobile ONLY styling rules */
+		@media only screen and (max-width: 767px) {
+
+		}
+		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="slider single-item">
+
+				<div class="slideDiv">
+					<img src="https://mojonow.blob.core.windows.net/cmr/t7686/src/7bd1377a70bc47c8a596801e1d2a83a8_1.png" class="starsImg" alt="">
+					<p class="slideP"><i>“I bought this a while ago and I will buy again. I like the flavor and have noticed I have more energy and less hunger at noon when I use this in the mornings.”</i></p>
+					<p class="slideP"><span class="reviewName">Gloria</span><br>07/10/2018</p>
+				</div>
+				<div class="slideDiv">
+					<img src="https://mojonow.blob.core.windows.net/cmr/t7686/src/7bd1377a70bc47c8a596801e1d2a83a8_1.png" class="starsImg" alt="">
+					<p class="slideP"><i>“My husband and daughter frequently drink smoothies and love to juice. They love to add it to their smoothies for a bright fruity taste. I love the organic quality and knowing that my family is receiving much-needed nutrients from this product.”</i></p>
+					<p class="slideP"><span class="reviewName">Nikeya</span><br>03/24/2018</p>
+				</div>
+				<div class="slideDiv">
+					<img src="https://mojonow.blob.core.windows.net/cmr/t7686/src/7bd1377a70bc47c8a596801e1d2a83a8_1.png" class="starsImg" alt="">
+					<p class="slideP"><i>“Brought it for my grandson he loves the flavor I guess because it taste like apple juice!”</i></p>
+					<p class="slideP"><span class="reviewName">MZAC</span><br>03/24/2018</p>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.single-item').slick({
+				  autoplay: true,
+  				  infinite: true,
+  				  cssEase: 'linear',
+  				  speed: 1000,
+  				  autoplaySpeed: 3000,
+  				  slidesToScroll: 1,
+				  arrows: false,
+				  dots:true,
+				  mobileFirst:true,
+				  slidesToShow: 1,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        arrows: false,
+				        slidesToShow: 1
+				      }
+				    },
+				    {
+				      breakpoint: 767,
+				      settings: {
+				        arrows: false,
+				        slidesToShow: 1,
+				        speed: 1000,
+				      }
+				    }
+				  ]
+
+				});
+
+			});
+		</script>
+
+
+	</body>
+	</html>

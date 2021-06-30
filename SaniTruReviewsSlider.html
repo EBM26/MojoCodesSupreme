@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<title>SaniTru Reviews Slider</title>
+	<style>
+		.container{width: 1200px; margin: 200px auto 0; overflow: visible;}
+
+
+		.slideP{color: #444444; font-size: 20px; margin: 0; text-align: center; margin-bottom: 20px;
+			    font-family: 'Rubik', sans-serif; }
+
+
+		/* ipad and mobile styling rules */
+		@media only screen and (max-width: 1099px) {
+			.container{width: auto;  margin: 80px auto 0;}
+		}
+		
+		/* mobile ONLY styling rules */
+		@media only screen and (max-width: 767px) {
+
+		}
+		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+		<div class="slider center">
+				<div class="slideDiv">
+					<p class="slideP">"1 I use SaniTru around my family everyday without having to worry about the chemicals and allergens. It's one less problem"</p>
+					<p class="slideP">- Jessica1</p>
+				</div>
+				
+				<div class="slideDiv">
+					<p class="slideP">"It's just great! I love that I can make fresh disinfectant whenever and wherever I want. SaniTru goes with me wherever I go. I don't have to keep buying expensive cleaners or disinfecting wipes.</p>
+					<p class="slideP">- Jolene</p>
+				</div>
+
+				<div class="slideDiv">
+					<p class="slideP">"It has ingredients that I can pronounce. It's simple yet super powerful. I gave this as a gift to my parents and they're simply amazed how it only costs $0.02 to make a whole bottle of disinfectant. The best part is you can test the strength of the solution with the Ph test strip."</p>
+					<p class="slideP">- Martin</p>
+				</div>
+
+				<div class="slideDiv">
+					<p class="slideP">"I'm pregnant, so I have to be careful about using certain cleaning products like bleach. With SaniTru, I never have to worry about using it around the kitchen, bathroom (mirrors and tiles) or even the bedroom."</p>
+					<p class="slideP">-   Christina</p>
+				</div>
+				<div class="slideDiv">
+					<p class="slideP">"I am a restaurant owner and I've been using the product to disinfect doorknobs and lightswitches daily, as well as tackling old stains/messes. This one cleaner replaces so many things- I can use it for the kitchen, bathroom, walls, carpets, virtually anything. I spray it in the sink and dishwasher to prevent smells from developing"</p>
+					<p class="slideP">-  P.Walker</p>
+				</div>
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.center').slick({
+				  centerMode: true,
+				  centerPadding: '0px',
+				  arrows: false,
+				  dots:true,
+				  slidesToShow: 1,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        arrows: false,
+				        centerMode: true,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    },
+				    {
+				      breakpoint: 767,
+				      settings: {
+				        arrows: false,
+				        centerMode: false,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    }
+				  ]
+
+				});
+
+			});
+		</script>
+
+
+	</body>
+	</html>

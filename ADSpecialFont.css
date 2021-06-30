@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: ("Colaborate-Bold");
+    font-weight: bold;
+    src: url("conjure_resource(d2e126cfa40d471ba89667a551a16e94)") format("opentype");
+}
+
+@font-face {
+    font-family: ("MinionPro-Regular");
+    src: url("conjure_resource(dda69662220b4872aae854ea164016fb)") format("opentype");   
+}
+
+@font-face {
+    font-family: ("BebasKai-Regular");
+    src: url("conjure_resource(381a3333a6794ed7a602556d9be67693)") format("opentype");   
+}
+
+
+.colaborate{font-family: "Colaborate-Bold" !important;}
+.MinionPro{font-family: "MinionPro-Bold" !important;}
+.BebasKai{font-family: "BebasKai-Bold" !important;}
+
+
+
+
+

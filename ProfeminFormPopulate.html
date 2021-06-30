@@ -1,0 +1,61 @@
+	<style>
+		.inputField{display: block; box-sizing: border-box; width: 100%; padding: 10px 0px 10px 10px; font-size: 18px; color: #41565D; 
+					font-family: "Open Sans"; border: 1px solid #054872; margin-bottom: 20px;}
+		.twoDiv{display: flex;}
+		.twoDiv .inputDiv{flex: 1;}
+		.twoDiv .inputDivFirst{margin-right: 10px;}
+		.inputP{color: #2A292C; font-size: 16px; margin: 5px 0 5px;}
+		@media only screen and (max-width: 1023px) {}
+	</style>
+	<form class="js-client-info-form custom-form-1" method="POST">
+			<dvalue name="FORM_SET_CONTAINS_BILLING"></dvalue>
+			<dvalue name="FORM_SET_CONTAINS_SHIPPING"></dvalue>
+			<dvalue name="FORM_SET_IGNORE_VALIDATION"></dvalue>
+			<input id="CheckoutForm_IsPhoneNumberRequired" name="CheckoutForm_IsPhoneNumberRequired" type="hidden" value="{A.CheckoutForm_IsPhoneNumberRequired}">
+
+			<input value="true" name="BillingSameAsShipping" type="hidden">
+ 	
+            <select hidden name="{D.INPUT_SHIPPING_COUNTRY}" id="{D.INPUT_SHIPPING_COUNTRY}" data-field-is-required="true" data-control="country" data-states-selector="{D.INPUT_SHIPPING_STATE}"><dvalue name="INPUT_SHIPPING_COUNTRY_CONTENT"></dvalue></select>
+            <div class="inputDiv">
+                <p class="inputP">Email Address*</p>	
+			    <input name="{D.INPUT_SHIPPING_EMAIL}" id="{D.INPUT_SHIPPING_EMAIL}" value="{D.INPUT_SHIPPING_EMAIL_VALUE}" data-field-is-required="true" type="email" data-field-email="true" class="inputField">
+			</div>
+			<div class="inputDiv">
+                <p class="inputP">First Name*</p>
+				<input name="{D.INPUT_SHIPPING_FIRST_NAME}" id="{D.INPUT_SHIPPING_FIRST_NAME}" value="{D.INPUT_SHIPPING_FIRST_NAME_VALUE}"  data-field-is-required="true" type="text" class="inputField">
+			</div>
+			<div class="inputDiv">
+                <p class="inputP">Last Name*</p>
+				<input name="{D.INPUT_SHIPPING_LAST_NAME}" id="{D.INPUT_SHIPPING_LAST_NAME}" value="{D.INPUT_SHIPPING_LAST_NAME_VALUE}"  data-field-is-required="true" type="text" class="inputField">
+			</div>
+			<div class="inputDiv">
+                <p class="inputP">Address*</p>
+				<input name="{D.INPUT_SHIPPING_ADDRESS1}" id="{D.INPUT_SHIPPING_ADDRESS1}" value="{D.INPUT_SHIPPING_ADDRESS1_VALUE}" data-field-is-required="true" type="text" class="inputField">
+			</div>
+			<div class="inputDiv">
+                <p class="inputP">Address 2</p>
+				<input name="{D.INPUT_SHIPPING_ADDRESS2}" id="{D.INPUT_SHIPPING_ADDRESS2}" value="{D.INPUT_SHIPPING_ADDRESS2_VALUE}" type="text" class="inputField">
+			</div>
+			<div class="inputDiv">
+                <p class="inputP">City*</p>
+				<input name="{D.INPUT_SHIPPING_CITY}" id="{D.INPUT_SHIPPING_CITY}" value="{D.INPUT_SHIPPING_CITY_VALUE}" data-field-is-required="true" type="text" class="inputField rightInput">
+			</div>
+ 		    <div class="twoDiv">
+ 		    	<div class="inputDiv inputDivFirst">
+                	<p class="inputP">State*</p>
+					<select name="{D.INPUT_SHIPPING_STATE}" id="{D.INPUT_SHIPPING_STATE}" data-field-is-required="true" data-selected-state="{D.INPUT_SHIPPING_STATE_VALUE}" class="inputField"></select>
+				</div>
+				<div class="inputDiv">
+                	<p class="inputP">Zip Code*</p>
+ 			    	<input name="{D.INPUT_SHIPPING_ZIP}" id="{D.INPUT_SHIPPING_ZIP}" value="{D.INPUT_SHIPPING_ZIP_VALUE}" data-field-is-required="true" type="text" class="inputField">
+ 			    </div>
+			</div>
+			<div class="inputDiv">
+                	<p class="inputP">Phone Number</p>
+					<input name="{D.INPUT_SHIPPING_PHONE}" id="{D.INPUT_SHIPPING_PHONE}" value="{D.INPUT_SHIPPING_PHONE_VALUE}"  data-field-is-required="true" type="tel" class="inputField leftInput">
+			</div>
+		</form>
+
+
+		
+

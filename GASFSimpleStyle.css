@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+/* ---------- Fonts ---------- */
+
+@font-face {
+    font-family: ("MyriadPro-Regular");
+    src: url("conjure_resource(6a6d934a419345c8877e09911828ba01)") format("opentype");
+}
+@font-face {
+    font-family: ("MyriadPro-Bold");
+    font-weight: bold;
+    src: url("conjure_resource(9db6bf0d170f4c99acbec3b1dd95d93c)") format("opentype");   
+}
+
+@font-face {
+    font-family: ("Futura-Dem");
+    src: url("conjure_resource(8fc61115800d4cffbadda7645fc7b016)") format("opentype");
+}
+@font-face {
+    font-family: ("Futura-Bol");
+    font-weight: 500;
+    src: url("conjure_resource(cca878a8f2db4fdb92061d1353acef55)") format("opentype");
+}
+
+.futura {font-family: 'Futura-Bol', sans-serif !important;}
+.myriad{font-family: 'MyriadPro-Regular', sans-serif !important;}
+

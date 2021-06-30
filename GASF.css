@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family: ("MyriadPro-Regular");
+    src: url("conjure_resource(13625ea66f604ee280a0d15865388b62)") format("opentype");
+}
+@font-face {
+    font-family: ("MyriadPro-Bold");
+    font-weight: bold;
+    src: url("conjure_resource(35c31f394dd24bf2a8580dfbe7a53048)") format("opentype");   
+}
+
+
+h1, h2, h3, h4 {font-family: "MyriadPro-Bold, sans-serif" !important;}
+
+
+
+
+

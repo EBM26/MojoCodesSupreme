@@ -1,0 +1,10 @@
+  $(document).ready(function(){
+  
+    if($('.thank-table-title').text().indexOf('Detalles')>-1){
+
+        $('.custom-content pre').html('Enviamos las órdenes dentro de los 2 días hábiles desde el momento que recibimos tu pedido (a menos que esté pendiente por falta de existencias). En caso de haber algún problema con tu pedido, recibirás un mensaje de correo electrónico con más detalles. Confirmaremos la fecha de envío en un mensaje electrónico aparte. Por favor espera hasta 7-10 días hábiles para la entrega.');
+        $('.thank-info').html('En breve recibirás un correo electrónico de confirmación con esta información de pedido (revisa tu correo no deseado si no lo ves pronto) pero asegúrate de apuntar tu número de confirmación para estar seguro.<br><br>Imprime este recibo para tus archivos. ¿Preguntas sobre este pedido? Puedes comunicarte con nosotros por correo electrónico <a href="mailto:customerservice@buyrotorazer.com">customerservice@buyrotorazer.com</a> por teléfono al 800-774-1056. Ten en cuenta que es posible que tu pedido aparezca en nuestro sistema de servicio al cliente por otras 24-48 horas.<br><br>Si tienes alguna pregunta, tenemos varias maneras para que te comuniques con nosotros:<br><br>Llámanos al 1-800-220-7975. Tenemos personas reales con las que puedes hablar durante estos días y horarios: de lunes a viernes de 7:00 a.m. a 4:00 p.m. (Horario del Pacífico) y los sábados de 7:00 a.m. a 3:00 p.m. (Horario del Pacífico).<br><br>Envíanos un mensaje por correo electrónico a <a href="mailto:customerservice@buyrotorazer.com">customerservice@buyrotorazer.com</a>. Es un placer que te comuniques con nosotros, responderemos dentro de las 24 horas los días hábiles y los sábados. La oficina en estos momentos no responde a correos electrónicos durante los fines de semana.<br><br>No te pierdas nada! Agrega <a href="mailto:customerservice@buyrotorazer.com">customerservice@buyrotorazer.com</a> a tu libreta de direcciones para asegurarte de que recibir los correos electrónicos de Rotorazer en tu bandeja de entrada.');
+        $('.custom-top').css('display', 'none !important');
+    }
+  });
+

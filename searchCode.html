@@ -1,0 +1,76 @@
+<div id="featuresWrapper" class="generalWrapper">
+	<p class="FaqTitle">Features FAQs</p>
+	<div class="faq-wrapper">
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">What are the dimensions of the AquaTru?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">14" Tall x 14" Deep x 12" Wide 35.56 cm Tall x 35.56 cm Deep x 30.48 cm Wide.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">What are the dimensions of the clean water tank?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">7.75″ Tall x 5.75″ Wide x 9.625″ Deep. 19.69 cm Tall x 14.61 cm Wide x 24.45 cm Deep.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">How much does AquaTru weigh?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">16 pounds.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">How much water does AquaTru hold?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">The tap water tank holds about a gallon of water. The clean water tank holds about 3 quarts of purified water.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">How quickly does AquaTru work?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">AquaTru purifies a gallon of water in 12 to 15 minutes.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">Does AquaTru require electricity?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">AquaTru operates off a 120-volt AC wall plug.</p>
+		</div>
+		<div class="question-div">
+			<span class="plus">+</span> <p class="question-p" style="margin-top: 10px">What does it cost in electricity to run AquaTru?</p>
+			<div class="clear"></div>
+		</div>
+		<div class="answer-div">
+			<p class="answer-p">For an average household that will consume 2 full tanks each day, the cost is about $1 a year. Each gallon will cost about $0.0013.</p>
+		</div>
+	</div>
+</div>
+
+
+
+<script>
+
+
+$(document).ready(function() {
+
+				$('#search').keyup(function(e) {
+					var s = $(this).val().trim();
+					if (s === '') {
+						$('.result .question-div').show();
+						return true;
+					}
+					$('.result .question-div:not(:contains(' + s + '))').hide();
+					$('.result .question-div:contains(' + s + ')').show();
+					return true;
+				});
+
+}); // end document ready
+
+</script>

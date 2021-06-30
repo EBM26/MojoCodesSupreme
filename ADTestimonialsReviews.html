@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<title>AD Testimonials Reviews</title>
+	<style>
+		.container{width: 100%; margin: 60px auto 0; overflow: visible;}
+
+		.secondary-carousel .flickity-page-dots{bottom: 0px !important;}
+		.SecondaryslideP{color: #313D4A; font-size: 25px;text-align: center;
+			    font-family: 'PT Sans', sans-serif; max-width: 580px; margin: auto;
+			    background: rgba(250, 250, 250, .7); padding: 15px;}
+		.second-cell{width: 100%;}
+
+
+		@media only screen and (max-width: 1023px) {
+			.TOPbigP{font-size: 40px; font-weight: normal;}
+		}
+		
+		@media only screen and (max-width: 767px) {
+			.SecondaryslideP{font-size: 18px;}
+		}
+		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="secondary-carousel js-flickity" data-flickity='{ "autoPlay": true }'>
+
+  				<div class="second-cell">
+					<p class="SecondaryslideP">"I love my AirDoctor!! It’s nice breathing in clean air and has helped a ton with my allergies! I’ve only had it a month and it’s collected a lot already. Worth the purchase!"<br><br><i>Mackinsey L.</i></p>
+  				</div>
+
+  				<div class="second-cell">
+					<p class="SecondaryslideP">"Love this product ESPECIALLY for fire smoke season!"<br><br><i>Linda S.</i></p>
+  				</div>
+
+  				<div class="second-cell">
+					<p class="SecondaryslideP">"You’ll love it. You can actually tell the air is cleaner. It’s quiet and small and changing filters is really easy 👍"<br><br><i>Michelle D.</i></p>
+  				</div>
+
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.secondary-carousel').flickity({
+  					cellAlign: 'center',
+  					freeScroll: true,
+  					autoPlay: 5000
+
+  				});
+			});
+		</script>
+
+
+	</body>
+	</html>

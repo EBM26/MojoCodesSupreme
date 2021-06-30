@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" type="image/x-icon" href="../mp-favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Day Counter</title>
+	<style>
+		*{text-decoration: none; margin: 0; padding: 0;}
+		html,body{margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #191919;}
+		img{border: none;}
+		li{list-style-type: none;}
+		div{display: block; margin: 0; padding: 0;}
+		u{text-decoration: underline;}
+		s{text-decoration: line-through;}
+		i{font-style: italic;}
+		b{font-weight: bold;}
+		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+		.Fright, .constantFright{float: right;}
+		.Fleft, .constantFleft{float: left;}
+		.clear{clear: both;}
+		.container{width: 1100px; margin: auto;}
+		.row{padding: 0 40px;}
+		.flex-container{display: flex;}
+		.flex1{flex: 1;}
+		.align-left{text-align: left;}
+		.inline{display: inline;}
+		.inline-block{display: inline-block;}
+		.uppercase{text-transform: uppercase;}
+		.center{text-align: center;}
+		.relative{position: relative;}
+		.hidden{display: none;}
+		.font12{font-size: 12px;}
+		.font14{font-size: 14px;}
+		.font20{font-size: 20px;}
+		.font22{font-size: 22px;}
+		.font24{font-size: 24px;}
+		.font16{font-size: 16px;}
+		.font18{font-size: 18px;}
+		.font26{font-size: 26px;}
+		.font28{font-size: 28px;}
+		.font36{font-size: 36px;}
+
+		/* ipad and mobile styling rules */
+		@media only screen and (max-width: 1099px) {
+			.container{width: auto;}
+			.row{padding: 0 10px;}
+			.flex-container, .desktopHide{display: block;}
+			.Fright, .Fleft{float: none;}
+			
+		}
+		
+		/* mobile ONLY styling rules */
+		@media only screen and (max-width: 736px) {
+		
+		}
+		
+		/* mobile LANDSCAPE ONLY styling rules */
+		@media only screen and (max-width: 736px) and (orientation: landscape) {
+			
+		}
+	</style>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			
+		</div>
+		<script>
+			var then = new Date(2010, 03, 02), 
+    		now  = new Date;               
+			var totalDays = Math.round((now - then) / (1000 * 60 * 60 * 24)); 
+			console.log(totalDays);
+		</script>		
+	</body>
+	</html>

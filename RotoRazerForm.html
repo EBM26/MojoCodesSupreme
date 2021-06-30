@@ -1,0 +1,122 @@
+<style>
+.inputField {
+ display: block; 
+box-sizing: border-box; 
+width: 100%; 
+padding: 0px 10px 0px 10px; 
+font-size: 18px; 
+color: #41565D; 
+font-family: "Open Sans"; 
+border: 1px solid #ccc; 
+margin-bottom: 10px;
+}
+.twoDiv {
+display: flex;
+}
+.twoDiv .rightInput {
+margin-right: 10px;
+}
+.twoDiv .leftInput {
+margin-left: 10px;
+}
+.custom-form-1 {
+background: #FEF4D1;
+padding: 15px;
+}
+</style>
+
+<form class="js-client-info-form custom-form-1" method="POST">
+    <dvalue name="FORM_SET_CONTAINS_BILLING"></dvalue>
+    <dvalue name="FORM_SET_CONTAINS_SHIPPING"></dvalue>
+    <dvalue name="FORM_SET_IGNORE_VALIDATION"></dvalue>
+    <input id="CheckoutForm_IsPhoneNumberRequired" name="CheckoutForm_IsPhoneNumberRequired" type="hidden" value="{A.CheckoutForm_IsPhoneNumberRequired}">
+
+    <input value="true" name="BillingSameAsShipping" type="hidden">
+    
+    <select class="inputField" name="{D.INPUT_SHIPPING_COUNTRY}" id="{D.INPUT_SHIPPING_COUNTRY}" data-field-is-required="true" data-control="country" data-states-selector="{D.INPUT_SHIPPING_STATE}">
+    
+    <!--  <dvalue name="INPUT_SHIPPING_COUNTRY_CONTENT"></dvalue> -->
+    
+       <option value="2">Canada</option>
+       <option selected value="1">United States</option>
+      
+    </select>   
+
+        <input name="{D.INPUT_SHIPPING_FIRST_NAME}" id="{D.INPUT_SHIPPING_FIRST_NAME}" value="{D.INPUT_SHIPPING_FIRST_NAME_VALUE}" placeholder="First Name" data-field-is-required="true" type="text" class="inputField">
+        <input name="{D.INPUT_SHIPPING_LAST_NAME}" id="{D.INPUT_SHIPPING_LAST_NAME}" value="{D.INPUT_SHIPPING_LAST_NAME_VALUE}" placeholder="Last Name" data-field-is-required="true" type="text" class="inputField">
+
+    <input name="{D.INPUT_SHIPPING_ADDRESS1}" id="{D.INPUT_SHIPPING_ADDRESS1}" value="{D.INPUT_SHIPPING_ADDRESS1_VALUE}" placeholder="Address" data-field-is-required="true" type="text" class="inputField">
+    <input name="{D.INPUT_SHIPPING_ADDRESS2}" id="{D.INPUT_SHIPPING_ADDRESS2}" value="{D.INPUT_SHIPPING_ADDRESS2_VALUE}" placeholder="Apt/Suite" type="text" class="inputField">
+
+        <input name="{D.INPUT_SHIPPING_CITY}" id="{D.INPUT_SHIPPING_CITY}" value="{D.INPUT_SHIPPING_CITY_VALUE}" placeholder="City" data-field-is-required="true" type="text" class="inputField">
+        <select name="{D.INPUT_SHIPPING_STATE}" id="{D.INPUT_SHIPPING_STATE}" data-field-is-required="true" data-selected-state="{D.INPUT_SHIPPING_STATE_VALUE}" placeholder="State" class="inputField"></select>
+
+
+        <input name="{D.INPUT_SHIPPING_ZIP}" id="{D.INPUT_SHIPPING_ZIP}" value="{D.INPUT_SHIPPING_ZIP_VALUE}" placeholder="Postal Code" data-field-is-required="true" type="text" class="inputField">
+        <input name="{D.INPUT_SHIPPING_PHONE}" id="{D.INPUT_SHIPPING_PHONE}" value="{D.INPUT_SHIPPING_PHONE_VALUE}" placeholder="Phone" data-field-is-required="true" type="tel" class="inputField">
+
+        <input name="{D.INPUT_SHIPPING_EMAIL}" id="{D.INPUT_SHIPPING_EMAIL}" value="{D.INPUT_SHIPPING_EMAIL_VALUE}" placeholder="Email" data-field-is-required="true" type="email" data-field-email="true" class="inputField">
+</form>
+
+
+
+
+
+<style>
+.inputField {
+ display: block; 
+box-sizing: border-box; 
+width: 100%; 
+padding: 0px 10px 0px 10px; 
+font-size: 18px; 
+color: #41565D; 
+font-family: "Open Sans"; 
+border: 1px solid #ccc; 
+margin-bottom: 10px;
+}
+.twoDiv {
+display: flex;
+}
+.twoDiv .rightInput {
+margin-right: 10px;
+}
+.twoDiv .leftInput {
+margin-left: 10px;
+}
+.custom-form-1 {
+background: #FEF4D1;
+padding: 15px;
+}
+</style>
+
+<form class="js-client-info-form custom-form-1" method="POST">
+    <dvalue name="FORM_SET_CONTAINS_BILLING"></dvalue>
+    <dvalue name="FORM_SET_CONTAINS_SHIPPING"></dvalue>
+    <dvalue name="FORM_SET_IGNORE_VALIDATION"></dvalue>
+    <input id="CheckoutForm_IsPhoneNumberRequired" name="CheckoutForm_IsPhoneNumberRequired" type="hidden" value="{A.CheckoutForm_IsPhoneNumberRequired}">
+
+    <input value="true" name="BillingSameAsShipping" type="hidden">
+    
+    <select class="inputField" name="{D.INPUT_SHIPPING_COUNTRY}" id="{D.INPUT_SHIPPING_COUNTRY}" data-field-is-required="true" data-control="country" data-states-selector="{D.INPUT_SHIPPING_STATE}">
+    
+    <!--  <dvalue name="INPUT_SHIPPING_COUNTRY_CONTENT"></dvalue> -->
+    
+       <option value="2">Canada</option>
+       <option selected value="1">Estados Unidos</option>
+      
+    </select>  
+        <input name="{D.INPUT_SHIPPING_FIRST_NAME}" id="{D.INPUT_SHIPPING_FIRST_NAME}" value="{D.INPUT_SHIPPING_FIRST_NAME_VALUE}" placeholder="Nombre" data-field-is-required="true" type="text" class="inputField">
+        <input name="{D.INPUT_SHIPPING_LAST_NAME}" id="{D.INPUT_SHIPPING_LAST_NAME}" value="{D.INPUT_SHIPPING_LAST_NAME_VALUE}" placeholder="Apellido" data-field-is-required="true" type="text" class="inputField">
+
+    <input name="{D.INPUT_SHIPPING_ADDRESS1}" id="{D.INPUT_SHIPPING_ADDRESS1}" value="{D.INPUT_SHIPPING_ADDRESS1_VALUE}" placeholder="Dirección" data-field-is-required="true" type="text" class="inputField">
+    <input name="{D.INPUT_SHIPPING_ADDRESS2}" id="{D.INPUT_SHIPPING_ADDRESS2}" value="{D.INPUT_SHIPPING_ADDRESS2_VALUE}" placeholder="Apt/Suite" type="text" class="inputField">
+
+        <input name="{D.INPUT_SHIPPING_CITY}" id="{D.INPUT_SHIPPING_CITY}" value="{D.INPUT_SHIPPING_CITY_VALUE}" placeholder="Cíudad" data-field-is-required="true" type="text" class="inputField">
+        <select name="{D.INPUT_SHIPPING_STATE}" id="{D.INPUT_SHIPPING_STATE}" data-field-is-required="true" data-selected-state="{D.INPUT_SHIPPING_STATE_VALUE}" placeholder="State" class="inputField"></select>
+
+
+        <input name="{D.INPUT_SHIPPING_ZIP}" id="{D.INPUT_SHIPPING_ZIP}" value="{D.INPUT_SHIPPING_ZIP_VALUE}" placeholder="Código Postal" data-field-is-required="true" type="text" class="inputField">
+        <input name="{D.INPUT_SHIPPING_PHONE}" id="{D.INPUT_SHIPPING_PHONE}" value="{D.INPUT_SHIPPING_PHONE_VALUE}" placeholder="Tel" data-field-is-required="true" type="tel" class="inputField">
+
+        <input name="{D.INPUT_SHIPPING_EMAIL}" id="{D.INPUT_SHIPPING_EMAIL}" value="{D.INPUT_SHIPPING_EMAIL_VALUE}" placeholder="Email" data-field-is-required="true" type="email" data-field-email="true" class="inputField">
+</form>

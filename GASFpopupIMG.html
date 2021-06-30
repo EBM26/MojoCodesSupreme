@@ -1,0 +1,38 @@
+<style>
+.overlayreturnPol{width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; cursor: pointer; background-color:rgba(119, 119, 119, 0.7); display: none;
+		 -webkit-animation: fadein .5s; animation: fadein .5s; z-index: 2000000; overflow: scroll;}
+.close-overlayreturnPol{cursor: pointer; color: #000; font-size: 15px; font-weight: bold; 
+						display: inline-block; float: right; margin-top: -30px;}
+.overlayreturnPol-content{margin: 200px auto; background: #fff; max-width: 800px;
+						  padding: 40px 20px; position: relative;}
+.overlayreturnPol-content p{color: #000; margin: 0; padding: 0;}
+
+ </style>
+	<div class="overlayreturnPol">
+			<div class="row">
+			<div class="containerReturn">
+				<div class="overlayreturnPol-content"><div class="close-overlayreturnPol">X</div>
+				<p><b>Return Policy<br>The Paint Zoom 30-Day Money Back Guarantee</b></p><br><br>
+				<p>If within 30 days of receiving Paint Zoom, you are not thrilled with your purchase, simply call customer service at1-800-793-2303 to return your Paint Zoom for a complete refund of your purchase price (less shipping and processing).</p>
+			</div>
+			</div>
+		</div> 
+		</div> 
+
+<script>
+	 $(".widget-nav__item:last-child").click(function(e){
+	 	e.preventDefault();
+		$(".overlayreturnPol").fadeIn();
+	});
+ 
+ 	$(".close-overlayreturnPol").click(function(){
+		$(".overlayreturnPol").fadeOut();
+	});
+</script>
+
+
+
+
+
+
+	

@@ -1,0 +1,117 @@
+<style>
+.padbot10{width: 100%;}
+.faq-heading{font-size: 19px;font-weight: bold; color: #2F4858 !important;}
+.text-box p{margin-bottom: 0px;}
+.text-box{display: none;}
+.faq-div{cursor: pointer; border-bottom: 1px solid #ACB6BC; padding-bottom: 20px; margin-top: 20px;}
+.transition{transform: rotate(90deg); transition-timing-function: ease-in;}
+.show{display: block;} 
+.hide{display: none;}
+.arrow-icon{float: right;}
+#blueberries{position: absolute; right: -45px; top: -45px;}
+
+@media only screen and (max-width: 1024px) {
+    .faq-heading{font-size: 17px; max-width: 85%;}
+    .faq-div img {padding-top: 0px; margin-top: -20px}
+ }
+</style>
+<div class="row grey-back mobile-row" id="sixth-section">
+    <div class="container relative">
+        <div class="martop100 marbot40 mobileMargTop30">
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">Are all the fruits and vegetables in Grown American Superfood grown in the United States?</span>
+                    <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>Yes, all fruits and vegetables are grown in the United States by our family of organic American farmers.</p>
+                </div>
+            </div>
+        
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">Are all the fruits and vegetables in Grown American Superfood Organic?</span>
+                   <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>Yes, all the fruits and vegetables are USDA certified organic.</p>
+                </div>
+            </div>
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">How many servings of fruits and vegetables are in a scoop of Grown American Superfood?</span>
+                    <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>There is a full serving of vegetable and half a serving of fruit.</p>
+                </div>
+            </div>
+        
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">Is Grown American Superfood Vegan, Gluten free, soy free, dairy free?</span>
+                   <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>Yes, Grown American Superfood is Vegan. It is also Gluten free, Soy free, and Dairy free. Grown American Superfood contains No Fat, No Fillers, NO added Sugar and No Cholesterol. Grown American Superfood Is Non-GMO (Not genetically modified).</p>
+                </div>
+            </div>
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">How many calories are in each serving of Grown American Superfood?</span>
+                    <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>There is a full serving of vegetable and half a serving of fruit.Grown American Superfood has only 25 calories per scoop.</p>
+                </div>
+            </div>
+        
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">How much sugar does Grown American Superfood contain?</span>
+                   <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>Grown American Superfood has 4g of sugar per serving. This sugar comes from the organic fruits and vegetables. There is NO added sugar in Grown American Superfood.</p>
+                </div>
+            </div>
+            <div class="faq-div">
+                <div class="padbot10">
+                    <span class="faq-heading myriad">What are the benefits of consuming Fruits and Vegetables?</span>
+                    <img src="https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg" class="arrow-icon" alt="arrow down icon"> 
+                </div>
+                <div class="text-box myriad">
+                    <p>According to the Center for Disease Control, eating between 5-9 servings of fruits and vegetables per day helps you maintain a healthy weight, reduces the risk for heart disease, stroke and some cancers.</p>
+                    <p>Also, eating more fruits and Vegetables can help provide you with more energy and feel younger.</p>
+            </div>
+        </div> 
+    </div>
+ </div>
+
+ <script>
+     
+    $(document).ready(function() {
+
+        $(".faq-div").click(function(){
+
+        if(!$(this).hasClass("active")) {
+            $(".faq-div").removeClass("active");
+            $(".text-box").slideUp("");
+            $(".arrow-icon").attr("src","https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg");
+            $(this).addClass("active");
+            $(this).find(".text-box").slideDown("");
+            $(this).find(".arrow-icon").attr("src","https://mojonow.blob.core.windows.net/cmr/t6773/src/569a4eb5d5b04edab3cd50fd8c8855f9_1.svg");
+            }
+
+            else if($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(".text-box").slideUp("");
+                $(".arrow-icon").attr("src","https://mojonow.blob.core.windows.net/cmr/t6773/src/39e73d5b185f4182889076fcf699a117_1.svg");
+              }
+        });
+    });
+
+
+
+
+ </script>

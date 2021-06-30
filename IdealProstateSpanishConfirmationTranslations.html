@@ -1,0 +1,25 @@
+<script>
+  $(function(){
+  
+	if($('.thank-table-title').text().indexOf('Detalles')>-1){
+
+		$('.custom-content pre').html('Enviamos las órdenes dentro de los 2 días hábiles desde el momento que recibimos tu pedido (a menos que esté pendiente por falta de existencias). En caso de haber algún problema con tu pedido, recibirás un mensaje de correo electrónico con más detalles. Confirmaremos la fecha de envío en un mensaje electrónico aparte. Por favor espera hasta 7-10 días hábiles para la entrega.');
+		$('.thank-info').html('En breve recibirás un correo electrónico de confirmación con esta información de pedido (revisa tu correo no deseado si no lo ves pronto) pero asegúrate de apuntar tu número de confirmación para estar seguro.<br><br>Imprime este recibo para tus archivos. ¿Preguntas sobre este pedido? Puedes comunicarte con nosotros por correo electrónico <a href="mailto:customerservice@idealprostate.com">customerservice@idealprostate.com</a> o por teléfono al 800-775-5929. Ten en cuenta que es posible que tu pedido aparezca en nuestro sistema de servicio al cliente por otras 24-48 horas.<br><br>Si tienes alguna pregunta, tenemos varias maneras para que te comuniques con nosotros:<br><br>Llámanos al 1-800-775-5929. Tenemos personas reales con las que puedes hablar durante estos días y horarios: de lunes a viernes de 7:00 a.m. a 4:00 p.m. (Horario del Pacífico) y los sábados de 7:00 a.m. a 3:00 p.m. (Horario del Pacífico).<br><br>Envíanos un mensaje por correo electrónico a <a href="mailto:customerservice@idealprostate.com">customerservice@idealprostate.com</a>. Es un placer que te comuniques con nosotros, responderemos dentro de las 24 horas los días hábiles y los sábados. La oficina en estos momentos no responde a correos electrónicos durante los fines de semana.<br><br>No te pierdas nada! Agrega <a href="mailto:customerservice@idealprostate.com">customerservice@idealprostate.com</a> a tu libreta de direcciones para asegurarte de que recibir los correos electrónicos de Ideal Prostate en tu bandeja de entrada.');
+		$('.custom-top').css('display', 'none !important');
+};
+</script>
+
+
+<script>
+    if($('#CheckoutSkin').val()==='ElWayneo'){
+      $('.thank-header .item-field-4').html('E & P');
+      $('.ch-form-part-checkbox-dscr:first').html('Sí, inscríbame para recibir noticias acerca de las últimas ventas y ofertas exclusivas de Superthotics y nuestros socios! No recibirá Spam, sólo ofertas y noticias sobre tu salud. Respetamos tu privacidad y nunca compartiremos tu email.');
+      $('.offset2 .ch-form-part-name').html('<p>Fecha Vencimiento</p>');
+      $('.ch-form-part-checkbox-dscr .js-checkboxlabel').html('Haz un Equis en la caja para Aceptar La Oferta');
+      $('.bella [class*="btn--"]').css('background', '#fffc31 !important');
+      $('.ch-divider')html('<p>El Carrito de Ideal Prostate+</p>');
+
+    };
+</script>
+
+

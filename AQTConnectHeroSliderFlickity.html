@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<title>AQT Connect Hero Slider</title>
+	<style>
+		.container{width: 100%; margin: 60px auto 0; overflow: visible;}
+
+		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+		.TOPslide2{background: url(https://mojonow.blob.core.windows.net/cmr/t9478/src/c4b639da88d74f52976a092aa5db07f1_1.jpeg) center top no-repeat; background-size: cover;}
+		.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t9478/src/9aeb9d9eae914d68836b37ccefb1de43_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslide3{background: url(https://mojonow.blob.core.windows.net/cmr/t9383/src/ceb720c4a0c049ceb233b56c57dfbbd2_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslideP{color: #253037; font-size: 24px; margin: 0; margin-bottom: 15px; margin-left: 15px;
+			    font-family: 'Open Sans', sans-serif;}
+	    .TOPbigP{font-size: 50px; font-weight: bold;}
+	    .TOPtextCol{max-width: 1200px; margin: auto;}
+	    .slideButton{color: #ffffff; font-size: 22px; margin: 15px; padding: 15px;
+			    font-family: 'Open Sans', sans-serif; text-align: center; font-weight: bold;
+				max-width: 180px; background-color: #FBB442; border-radius: 5px;
+				box-shadow: 0 10px 15px 0 rgb(0 0 0 / 35%);}
+		.carousel-cell {width: 100%; padding: 60px 0 320px;}
+		.flickity-page-dots{bottom: 100px !important;}
+
+
+		@media only screen and (max-width: 1023px) {
+			.TOPslide2{background: url(https://mojonow.blob.core.windows.net/cmr/t4406/opt/e72066c778fa4895a380df955213026a_1.jpg) center top no-repeat; background-size: cover;}
+			.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t9478/src/1472cb2b151e4df8bb3329c0f62bfc2e_1.jpg) center top no-repeat; background-size: cover;}
+			.TOPslide3{background: url(https://mojonow.blob.core.windows.net/cmr/t9383/src/43e0405408084abcb9f215b4f783f5bb_1.jpg) center top no-repeat; background-size: cover;}
+			.TOPslideDiv{padding: 60px 0 200px;}
+		}
+		
+		@media only screen and (max-width: 767px) {
+			.TOPslideP{font-size: 18px;}
+			.TOPbigP{font-size: 36px;}
+			.TOPslide2{background: url(https://mojonow.blob.core.windows.net/cmr/t4406/opt/ac1da14bf73c44b08173f9cb56ae9018_1.jpg) left top no-repeat; background-size: cover; height: 330px;}
+			.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t9478/src/bf7752b9f1ac4a4ab207baf0810fcd8c_1.jpg) left top no-repeat; background-size: cover; height: 330px;}
+			.TOPslide3{background: url(https://mojonow.blob.core.windows.net/cmr/t9383/src/a55dcb89f56542b78a608a3ea8b8f5e6_1.jpg) center no-repeat; background-size: cover; height: 330px;}
+		}
+		
+		
+	</style>
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="main-carousel js-flickity" data-flickity='{ "autoPlay": true }'>
+  				<div class="carousel-cell TOPslide1">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">AquaTru Connect <br>Countertop Water Purifier</h1>
+						<p class="TOPslideP">The Smarter, Easier Way to Purify</p>
+						<a href="{D.ORDER_LINK}"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+  				<div class="carousel-cell TOPslide2">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">Beyond Filtration</h1>
+						<p class="TOPslideP">IT'S NOT JUST FILTERED. IT'S PURIFIED.</p>
+						<a href="{D.ORDER_LINK}"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+  				<div class="carousel-cell TOPslide3">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">Purely Delicious</h1>
+						<p class="TOPslideP">Healthy Hydration Has<br> Never Been So Easy</p>
+						<a href="{D.ORDER_LINK}"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.main-carousel').flickity({
+  					cellAlign: 'center',
+  					freeScroll: true,
+  					autoPlay: 5000
+
+  				});
+			});
+		</script>
+
+
+	</body>
+	</html>

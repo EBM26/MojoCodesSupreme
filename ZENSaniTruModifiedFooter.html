@@ -1,0 +1,82 @@
+<style>
+  a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+ .footCol{display: inline-block; float: left; width: 25%;}
+.colWrapper:after{clear: both;}
+.colWrapper{width: 100%; max-width: 1100px;}
+.footLinks{display: block; color: #444444 !important; font-size: 18px; margin-bottom: 10px;}
+.socialLink{display: inline-block; margin-right: 15px;}
+.clear{clear: both;}
+.bottomFooter{border-top: 1px solid #65737c!important; margin-top: 40px; padding-top: 20px;}
+.botFoot{font-size: 16px; color: #444444 !important; display: inline-block; margin: 0; text-align: center;}
+.leftColFoot{float: left;}
+.rightColFoot{float: right;}
+.separ{margin-right: 10px;}
+
+@media (max-width: 1024px) {
+  .nav-wrapper a {font-size: 16px;}
+  .nav-wrapper{text-align: right;}
+  .blocks-item{flex: 1 0 240px;}
+  .leftColFoot, .rightColFoot{float: none; text-align: center;}
+  .rightColFoot{margin-top: 15px;}
+  .footer{padding: 60px 10px 20px;}
+}
+
+@media (max-width: 767px) {
+  .footer{margin-top: 0; padding: 40px 10px 20px;}
+  .footCol{width: 50%; margin-bottom: 20px;}
+}
+
+
+</style>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="colWrapper">
+      <div class="footCol">
+        <a href="https://sanitru.com/" class="footLinks">
+          <img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/894607d0edeb42aaab4ca41cd6605de9_1.png" alt="" class="logoImg">
+        </a>
+      </div>
+      <div class="footCol">
+        <p class="footLinks"><u>HELPFUL LINKS</u></p>
+        <a href="https://sanitru.com/kill-virus" class="footLinks">Kill Viruses</a>
+        <a href="https://sanitru.com/faqs" class="footLinks">FAQs</a>
+        <a href="https://sanitru.com/for-businesses" class="footLinks">For Businesses</a>
+        <a href="https://sanitru.com/contact-us" class="footLinks">Contact Us</a>
+      </div>
+      <div class="footCol">
+        <p class="footLinks"><u>RESOURCES</u></p>
+        <a href="https://sanitru.com/return-policy" class="footLinks">Return Policy</a>
+        <a href="https://sanitru.com/privacy" class="footLinks">Privacy Policy</a>
+        <a href="https://sanitru.com/terms" class="footLinks">Terms and Conditions</a>
+      </div>
+       <div class="footCol">
+        <p class="footLinks"><u>STORE</u></p>
+        <a href="https://store.sanitru.com" class="footLinks">Buy Extra pH Strips</a>
+        <a href="https://www.facebook.com/SaniTruOfficial"><img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/ba4b834bcaa64dde89eb246e646fd49e_1.png" alt="" style="margin-right: 10px; max-width: 35px;"></a> <a href="https://www.instagram.com/sanitruofficial/"><img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/349a74b71e994e90828389d3a31083ee_1.png" alt="" style="max-width: 35px;"></a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="bottomFooter">
+        <p class="botFoot">© <span class="ytd"></span>SaniTru LLC - All Rights Reserved</p> 
+      </div>
+    </div>
+    <div class="footer-language-selector">
+      {{#if alternative_locales}}
+        <div class="dropdown language-selector">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_locale.name}}
+          </button>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</footer>
+

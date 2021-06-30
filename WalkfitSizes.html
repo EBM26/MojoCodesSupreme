@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wistia Codes</title>
+	<style>
+		.container{width: 960px; margin: 200px auto 0;}
+	</style>
+</head>
+<body>
+	<style>
+    .select-button {
+        padding: 10px;
+        margin: 10px 5px 5px;
+        display: block;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        width: 95%;
+        background-color: #dee4e6;
+        font-size: 20px;
+        font-family: Lato, sans-serif;
+        line-height: inherit;
+        font-weight: 700;
+        font-style: inherit;
+        color: #242f35;
+        text-transform: inherit;
+    }
+
+    .select-button:hover {
+        background: #7b919d;
+        color: #fff;
+    }
+
+    .select-button.active {
+        background: #7b919d;
+        color: #fff;
+    }
+
+    .widget-text-cs {
+        margin: 20px 0 5px 0;
+        font-size: 24px;
+        font-family: Lato, sans-serif;
+        text-align: inherit;
+        line-height: inherit;
+        font-weight: 700;
+        font-style: inherit;
+    }
+
+    .add-btn a {
+        cursor: default;
+        border: 3px solid #9CADB5 !important;
+        color: #9CADB5 !important;
+    }
+
+    .add-btn a.active {
+        cursor: pointer;
+        border: 3px solid #0066b1 !important;
+        color: #0066b1 !important;
+    }
+
+    .selectQBottom {
+        font-size: 22px;
+        border: 3px solid #9CADB5;
+        background: #fff;
+        width: 80px;
+        height: 40px;
+        margin: 7px auto;
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: 1060px) {
+        .selectQBottom {
+            font-size: 22px;
+            width: 50px;
+            height: 35px;
+        }
+    }
+
+    .item-box {
+        border: 1px solid #dee4e6;
+        padding: 10px;
+    }
+
+    .item-box .widget-text {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .item-box .item-price {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    .item-box .item-quantity {
+        float: left;
+        padding: 3px 10px 0 0;
+    }
+
+    .item-box .item-remove {
+        text-align: end;
+        font-weight: 500;
+        color: #0066b1;
+        cursor: pointer;
+    }
+
+</style>
+<div class="widget-text-cs">Select Type</div>
+<div class="grid">
+    <div class="grid__row">
+        <div class="grid__column area--6">
+            <div class="grid__cell">
+                <button data-type="women" class="select-button">Women's</button>
+            </div>
+        </div>
+        <div class="grid__column area--6">
+            <div class="grid__cell">
+                <button data-type="men" class="select-button">Men's</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="widget-text-cs">Select Size</div>
+<div class="grid" data-gender="women">
+    <div class="grid__row">
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="5" class="select-button">5 - 5.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="6" class="select-button">6 - 6.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="7" class="select-button">7 - 7.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="8" class="select-button">8 - 8.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="9" class="select-button">9 - 9.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="10" class="select-button">10 - 10.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="11" class="select-button">11 - 11.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="12" class="select-button">12 - 12.5</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid" data-gender="men" style="display:none">
+    <div class="grid__row">
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="6" class="select-button">6 - 6.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="7" class="select-button">7 - 7.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="8" class="select-button">8 - 8.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="9" class="select-button">9 - 9.5</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="10" class="select-button">10 - 10.5</button>
+            </div>
+        </div>
+         <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="11" class="select-button">11 - 11.5</button>
+            </div>
+        </div>
+         <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="12" class="select-button">12 - 12.5</button>
+            </div>
+        </div>
+         <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="13" class="select-button">13 - 13.5</button>
+            </div>
+        </div>
+         <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="14" class="select-button">14 - 14.5</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+	</div>
+	
+  
+
+
+</body>
+</html>

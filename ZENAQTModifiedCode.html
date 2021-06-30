@@ -1,0 +1,171 @@
+<!-- homepage -->
+<section class="section hero">
+  <div class="hero-inner">
+    {{search submit=false instant=settings.instant_search class='search search-full'}}
+  </div>
+</section>
+
+<div class="container">
+  <section class="section knowledge-base">
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{#each categories}}
+            <li class="blocks-item">
+            <a href='{{url}}' class="blocks-item-link">
+            {{#is name 'Products'}}
+            <img src="{{asset 'icon_product.svg'}}" />
+            {{/is}}
+            {{#is name 'Videos'}}
+            <img src="{{asset 'icon_video.svg'}}" />
+            {{/is}}
+            {{#is name 'Shipping'}}
+            <img src="{{asset 'icon_shipping.svg'}}" />
+            {{/is}}
+            {{#is name 'Billing/Payment'}}
+            <img src="{{asset 'icon_product.svg'}}" />
+            {{/is}}
+            {{#is name 'Warranty'}}
+            <img src="{{asset 'icon_warranty.svg'}}" />
+            {{/is}}
+            {{#is name 'Troubleshooting'}}
+            <img src="{{asset 'icon_trouble.svg'}}" />
+            {{/is}}
+            {{#is name 'FAQ'}}
+            <img src="{{asset 'icon_faq.svg'}}" />
+            {{/is}}
+            <h4 class="blocks-item-title">{{name}}</h4>
+            <p class="blocks-item-description">{{excerpt description}}</p>
+            </a>
+            </li>
+        {{/each}}
+      </ul>
+      {{pagination}}
+    </section>
+
+    {{#if promoted_articles}}
+      <section class="articles">
+        <h3>{{t 'promoted_articles'}}</h3>
+        <ul class="article-list promoted-articles">
+          {{#each promoted_articles}}
+            <li class="promoted-articles-item">
+                <a href="{{url}}">
+                  {{title}}
+
+                  {{#if internal}}
+                    <span class="icon-lock" title="{{t 'internal'}}"></span>
+                  {{/if}}
+                </a>
+            </li>
+          {{/each}}
+        </ul>
+      </section>
+    {{/if}}
+  </section>
+
+  {{#if help_center.community_enabled}}
+    <section class="section home-section community">
+      <h2>{{t 'community'}}</h2>
+      {{#link 'community' class='community-link'}}
+        {{t 'join_conversation'}}
+      {{/link}}
+
+      <div class="community-image"></div>
+    </section>
+  {{/if}}
+
+  <section class="section home-section activity">
+    {{#if settings.show_recent_activity}}
+      {{recent_activity}}
+    {{/if}}
+  </section>
+</div>
+
+
+<!-- header -->
+
+<header class="header">
+  <div class="logo">
+    <div class="logo">
+      <a href="https://aquatruwater.com">
+        <img src="https://mojonow.blob.core.windows.net/cmr/t831/src/0bc869afc551485c9faa40b516ca7a73_1.png">
+      </a>
+    </div>
+  </div>
+  <div class="nav-wrapper">
+    <a href="https://store.aquatruwater.com/" class="navAQTLink">Accessories</a>
+    <a href="https://aquatruwater.com/Contact-Us" class="navAQTLink">Contact Us</a>
+    <a href="https://aquatruwater.com/Reviews" class="navAQTLink">Reviews</a>
+    <a href="https://blog.aquatruwater.com/" class="navAQTLink">Blog</a>
+    <button class="menu-button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
+      </svg>
+    </button>
+    <nav class="user-nav" id="user-nav">
+      {{link 'community'}}
+      {{link 'new_request' class='submit-a-request'}}
+    </nav>
+    {{user_info}}
+  </div>
+</header>
+
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="colWrapper">
+      <div class="footCol">
+        <p class="colTitle">Products</p>
+        <a href="https://store.aquatruwater.com/" class="footLinks">Accessories</a>
+      </div>
+      <div class="footCol">
+        <p class="colTitle">Company</p>
+        <a href="https://aquatruwater.com/Contact-Us" class="footLinks">Contact</a>
+      </div>
+       <div class="footCol">
+        <p class="colTitle">Resources</p>
+        <a href="https://blog.aquatruwater.com/" class="footLinks">Blog</a>
+        <a href="https://aquatruwater.com/Reviews" class="footLinks">Reviews</a>
+        <a href="https://aquatruwater.com/Return-Policy" class="footLinks">Return Policy</a>
+        <a href="https://az686452.vo.msecnd.net/cmr/t831/src/0ac675ce5f72425bb0decee5de7c56d5_1.pdf" class="footLinks">Test Results</a>
+      </div>
+      <div class="footCol">
+        <p class="colTitle">Stay In Touch</p>
+        <a href="https://www.facebook.com/aquatru" class="socialLink" target="_blank"><img src="{{asset 'FB-icon.svg'}}" /></a>
+        <a href="https://twitter.com/AquaTru" class="socialLink" target="_blank"><img src="{{asset 'TwitterIcon.svg'}}" /></a>
+        <a href="https://instagram.com/aquatru" class="socialLink" target="_blank"><img src="{{asset 'InstaIcon.svg'}}" /></a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="bottomFooter">
+      <div class="leftColFoot">
+        <p class="botFoot">© <span class="ytd"></span> AquaTru, LLC - All rights Reserved</p> <span class="separ"> | </span>
+        <a href="https://privacy.idealliving.com/do-not-sell" class="botFoot">Do Not Sell My Personal Information</a>
+
+      </div>
+      <div class="rightColFoot">
+        <a href="https://aquatruwater.com/Privacy-Policy" class="botFoot">Privacy Policy</a>
+        <a href="https://aquatruwater.com/Terms-and-Conditions" class="botFoot">Terms & Conditions</a>
+        <a href="https://aquatruwater.com/International" class="botFoot">International</a>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="footer-language-selector">
+      {{#if alternative_locales}}
+        <div class="dropdown language-selector">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_locale.name}}
+          </button>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</footer>
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<title>SaniTru Home Slider</title>
+	<style>
+		.container{width: 1200px; margin: 60px auto 0; overflow: visible;}
+
+
+		.slideP{color: #444444; font-size: 20px; margin: 0; margin-bottom: 20px;
+			    font-family: 'Rubik', sans-serif;}
+	    .bigP{font-size: 30px; color: #0989CE; font-weight: bold;}
+	    .textCol, .imgCol{float: left; display: inline-block; width: 50%;}
+	    .clear{clear: both;}
+	    .textCol{padding-top: 160px; padding-left: 20px;}
+	    .imgCol img{max-width: 100%;}
+
+		@media only screen and (max-width: 1099px) {
+			.textCol{padding-top: 60px;}
+		}
+		
+		@media only screen and (max-width: 767px) {
+			.textCol, .imgCol{float: none; display: block; width: 100%;}
+			.textCol{padding-top: 20px; padding-left: 20px;}
+			.bigP{font-size: 24px;}
+			.slideP{font-size: 18px;}
+		}
+		
+		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+		<div class="slider center">
+
+				<div class="slideDiv">
+					<div class="textCol">
+						<p class="slideP bigP">Sanitize Every Inch of Your Kitchen</p>
+						<p class="slideP">Spray on cutting boards, counters, stovetops, refrigerator shelves, microwave tray and more. Leaves no harmful residue behind.</p>
+					</div>
+					<div class="imgCol">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/f573b0abb79a4261914dde0548932c24_1.jpg" alt="">
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="slideDiv">
+					<div class="textCol">
+						<p class="slideP bigP">Kill Germs on Shared Surfaces</p>
+						<p class="slideP">Spray on countertops, doorknobs, handles, remotes, cell phones, reusable shopping bags - any hard, non-porous surface that multiple people might touch.</p>
+					</div>
+					<div class="imgCol">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/741257170e1042099532a5767b606442_1.jpg" alt="">
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="slideDiv">
+					<div class="textCol">
+						<p class="slideP bigP">Clean-up After Babies, Kids, and Pets</p>
+						<p class="slideP">Use around all your loved ones - powerful enough to kill 99.9% of germs, remove smells, and purify tough-to-clean areas.</p>
+					</div>
+					<div class="imgCol">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/a44dd5d5bfa34a9b9effd0d9748cd68e_1.jpg" alt="">
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="slideDiv">
+					<div class="textCol">
+						<p class="slideP bigP">DEEP CLEAN Your Bathrooms</p>
+						<p class="slideP">Spray around the toilet and sink to kill viruses and bacteria, and spray around the shower to clean and remove stains from algae, mold and mildew growth.</p>
+					</div>
+					<div class="imgCol">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/d54ca140329349648eca307c660aa0b7_1.jpg" alt="">
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="slideDiv">
+					<div class="textCol">
+						<p class="slideP bigP">Conquer the Stink - Wherever It May Be</p>
+						<p class="slideP">Clean bacteria, mold, and mildew that cause odours in trash cans, litter boxes, shoes, cars, bathrooms, washing machines, basements. Freshen up and deodorize your whole home!</p>
+					</div>
+					<div class="imgCol">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t7864/src/5e78a180957b4c7b9b3a635d321987e4_1.jpg" alt="">
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.center').slick({
+				  centerMode: true,
+				  centerPadding: '0px',
+				  infinite: true,
+				  autoplay: true,
+  				  autoplaySpeed: 10000,
+				  arrows: false,
+				  dots:true,
+				  slidesToShow: 1,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        arrows: false,
+				        centerMode: true,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    },
+				    {
+				      breakpoint: 767,
+				      settings: {
+				        arrows: false,
+				        centerMode: false,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    }
+				  ]
+
+				});
+
+			});
+		</script>
+
+
+	</body>
+	</html>

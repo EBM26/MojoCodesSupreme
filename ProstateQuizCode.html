@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<link rel="icon" type="image/x-icon" href="../mp-favicon.ico" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Prostate Quiz Code</title>
+<!-- 	<link rel="stylesheet" href="css/style.css">
+ -->	<style>
+		*{text-decoration: none; margin: 0; padding: 0;}
+		html,body{margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #191919;}
+		img{border: none;}
+		li{list-style-type: none;}
+		div{display: block; margin: 0; padding: 0;}
+		u{text-decoration: underline;}
+		s{text-decoration: line-through;}
+		i{font-style: italic;}
+		b{font-weight: bold;}
+		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+		.Fright, .constantFright{float: right;}
+		.Fleft, .constantFleft{float: left;}
+		.clear{clear: both;}
+		.container{width: 1100px; margin: auto;}
+		.row{padding: 0 40px;}
+		.flex-container{display: flex;}
+		.flex1{flex: 1;}
+		.align-left{text-align: left;}
+		.inline{display: inline;}
+		.inline-block{display: inline-block;}
+		.uppercase{text-transform: uppercase;}
+		.center{text-align: center;}
+		.relative{position: relative;}
+		.hidden{display: none;}
+		.font12{font-size: 12px;}
+		.font14{font-size: 14px;}
+		.font20{font-size: 20px;}
+		.font22{font-size: 22px;}
+		.font24{font-size: 24px;}
+		.font16{font-size: 16px;}
+		.font18{font-size: 18px;}
+		.font26{font-size: 26px;}
+		.font28{font-size: 28px;}
+		.font36{font-size: 36px;}
+		
+		.overlay2{width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; cursor: pointer; background-color:rgba(0, 0, 0, 0.6); display: none;
+				 -webkit-animation: fadein .5s; animation: fadein .5s; z-index: 200000; overflow: scroll;}
+		#closeOverlay {position: absolute; display: inline-block; width: 50px; height: 50px; overflow: hidden;
+					  z-index: 1000; right: 15%; top: 5%; margin-top: 2%;}
+		#closeOverlay:hover::before, #closeOverlay:hover::after{background: #bf2c30;}
+		#closeOverlay::before, #closeOverlay::after{content: ""; position: absolute; height: 2px; width: 100%;
+													 top: 50%; left: 0; margin-top: -1px; background: #fff;}
+		#closeOverlay::before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg);
+							 -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}
+		#closeOverlay::after{-webkit-transform: rotate(-45deg);-moz-transform: rotate(-45deg); 
+							-ms-transform: rotate(-45deg);-o-transform: rotate(-45deg);transform: rotate(-45deg);}
+		#closeOverlay.big{-webkit-transform: scale(3); -moz-transform: scale(3); -ms-transform: scale(3);
+						 -o-transform: scale(3); transform: scale(3);}
+		.pleaseBox{border: 3px solid #0282C9; padding: 20px; color: #bf2c30; font-size: 20px; max-width: 45%;
+				   margin: auto; position: absolute; background: #fff; margin-top: 20%;}
+		.overlay-content{display: flex; justify-content: center; align-content: center;}
+		@media only screen and (max-width: 1023px) {
+		
+		
+		}
+		@media only screen and (max-width: 736px) {
+		  .pleaseBox{max-width: 85%;}
+		  #closeOverlay{right: 0;}
+		}
+
+		
+	</style>
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		
+		<div class="container">
+			
+		<div class="overlay2">
+			<div class="row">
+				<div class="OverlayContainer relative">
+			<div class="overlay-content"><div id="closeOverlay"></div>
+				<div class="pleaseBox">
+					<p>Please make sure to answer all of the quiz questions before proceeding!</p>
+				</div>
+		  </div>
+			</div> <!-- end of container -->
+		</div> <!-- end of row and overlay -->
+		</div>
+
+
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+
+				let Q1Val = $("input[name='Q1']:checked").val();
+				let Q2Val = $("input[name='Q2']:checked").val();
+				let Q3Val = $("input[name='Q3']:checked").val();
+				let Q4Val = $("input[name='Q4']:checked").val();
+				let Q5Val = $("input[name='Q5']:checked").val();
+				let Q6Val = $("input[name='Q6']:checked").val();
+				let Q7Val = $("input[name='Q7']:checked").val();
+				let finalScore = parseInt(Q1Val) + parseInt(Q2Val) + parseInt(Q3Val) + parseInt(Q4Val) + parseInt(Q5Val) + parseInt(Q6Val) + parseInt(Q7Val);
+
+				 if ( !(Q1Val) || !(Q2Val) || !(Q3Val) || !(Q4Val) || !(Q5Val) || !(Q6Val) || !(Q7Val) ) {
+				 	$(".overlay2").show();
+				 }
+
+				 if ( (finalScore) < 8 ) {
+						location.href = 'http://mbnqkk.mojoqa.com/results?score=' + finalScore;
+				 	}
+
+				 else if ( ((Q1Val + Q2Val + Q3Val + Q4Val + Q5Val + Q6Val + Q7Val) > 7) && ( (Q1Val + Q2Val + Q3Val + Q4Val + Q5Val + Q6Val + Q7Val) < 20 ) ) {
+				 		location.href = 'http://mbnqkk.mojoqa.com/results?score=' + finalScore;;
+				 	}
+
+				  else if ( (Q1Val + Q2Val + Q3Val + Q4Val + Q5Val + Q6Val + Q7Val) > 19 ) {
+				 		location.href = 'http://mbnqkk.mojoqa.com/results?score=' + finalScore;;
+				 	}
+				
+				
+				$("#closeOverlay").click(function(){
+					$(".overlay2").fadeOut();
+				});
+			});
+		</script>
+
+		<script>
+				$(document).ready(function() {
+
+
+				$.extend({
+					  getUrlVars: function(){
+					    var vars = [], hash;
+					    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+					    for(var i = 0; i < hashes.length; i++)
+					    {
+					      hash = hashes[i].split('=');
+					      vars.push(hash[0]);
+					      vars[hash[0]] = hash[1];
+					    }
+					    return vars;
+					  },
+					  getUrlVar: function(name){
+					    return $.getUrlVars()[name];
+					  }
+					});
+				
+					var byScore = $.getUrlVar('score');
+
+					$('#resultNum').html(byScore);
+
+					if (byScore < 8) {
+						$('.moderateScore').removeClass('activeScore');	
+						$('.lowScore').addClass('activeScore');	
+						$('.scaleIMG img').attr("src","https://mojonow.blob.core.windows.net/cmr/t3660/src/74cf6592d4d844b0814881550a207e88_1.png");
+					}
+
+					if (byScore > 19) {	
+						$('.moderateScore').removeClass('activeScore');	
+						$('.highScore').addClass('activeScore');	
+						$('.scaleIMG img').attr("src","https://mojonow.blob.core.windows.net/cmr/t3660/src/bee727865a364398bb45ebb329221d8c_1.png");
+					}
+					
+ 			});
+		</script>
+	</body>
+	</html>

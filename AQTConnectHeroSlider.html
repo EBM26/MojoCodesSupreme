@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+	<title>AQT Connect Hero Slider</title>
+	<style>
+		.container{width: 100%; margin: 60px auto 0; overflow: visible;}
+
+		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+		.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t4406/src/bcda52405cbe419784cf3c23316bb0a9_1.jpg) center top no-repeat; background-size: cover;}
+		.TOPslide2{background: url(https://mojonow.blob.core.windows.net/cmr/t9383/src/64c974b239db4f75a4f236ff29e9f97f_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslideP{color: #253037; font-size: 24px; margin: 0; margin-bottom: 15px; margin-left: 15px;
+			    font-family: 'Open Sans', sans-serif;}
+	    .TOPbigP{font-size: 50px; font-weight: bold;}
+	    .TOPtextCol{max-width: 1200px; margin: auto;}
+	    .TOPslideDiv{padding: 60px 0 320px;}
+	    .slideButton{color: #ffffff; font-size: 22px; margin: 15px; padding: 15px;
+			    font-family: 'Open Sans', sans-serif; text-align: center; font-weight: bold;
+				max-width: 180px; background-color: #FBB442; border-radius: 5px;
+				box-shadow: 0 10px 15px 0 rgb(0 0 0 / 35%);}
+		.slick-prev{left: 25px; z-index: 1000;}
+		.slick-next{right: 25px; z-index: 1000;}
+		.slick-next:before, .slick-prev:before{color: #00AEEF; font-size: 30px;}
+
+
+		@media only screen and (max-width: 1023px) {
+			.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t4406/opt/e72066c778fa4895a380df955213026a_1.jpg) center top no-repeat; background-size: cover;}
+			.TOPslideDiv{padding: 60px 0 200px;}
+		}
+		
+		@media only screen and (max-width: 767px) {
+			.TOPslideP{font-size: 18px;}
+			.TOPbigP{font-size: 36px;}
+			.TOPslide1{background: url(https://mojonow.blob.core.windows.net/cmr/t4406/opt/ac1da14bf73c44b08173f9cb56ae9018_1.jpg) left top no-repeat; background-size: cover; height: 330px;}
+			.TOPslideDiv{padding: 30px 0 80px;}
+		}
+		
+		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+		<div class="slider single-item">
+
+				<div class="TOPslideDiv TOPslide1">
+					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">Beyond Filtration</h1>
+						<p class="TOPslideP">IT'S NOT JUST FILTERED. IT'S PURIFIED.</p>
+						<a href="{D.ORDER_LINK}"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+				</div>
+				<div class="TOPslideDiv TOPslide2">
+					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">AquaTru Connect <br>Countertop Water Purifier</h1>
+						<p class="TOPslideP">The Smarter, Easier Way to Purify</p>
+						<a href="{D.ORDER_LINK}"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+				</div>
+				
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.single-item').slick({
+				  infinite: true,
+				  autoplay: true,
+  				  autoplaySpeed: 10000,
+				  arrows: true,
+				  dots:true,
+				  slidesToShow: 1,
+				  responsive: [
+				    {
+				      breakpoint: 768,
+				      settings: {
+				        arrows: true,
+				        centerMode: true,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    },
+				    {
+				      breakpoint: 767,
+				      settings: {
+				        arrows: true,
+				        centerMode: false,
+				        centerPadding: '40px',
+				        slidesToShow: 1
+				      }
+				    }
+				  ]
+
+				});
+
+			});
+		</script>
+
+
+	</body>
+	</html>

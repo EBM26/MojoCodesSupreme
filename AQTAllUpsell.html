@@ -1,0 +1,49 @@
+<style>
+	.inputWrapper{background: #F8F9F9; max-width: 330px; text-align: center; box-sizing: border-box; 
+				  color: #415066; font-family: Montserrat; font-size: 20px; text-transform: uppercase;
+				  padding: 10px 0;}
+	.circle{width: 28px; height: 28px; border-radius: 50%; border: 2px solid #415066; display: inline-block;
+			vertical-align: -8px; margin-right: 10px;}
+	.inner-circle{width: 24px; height: 24px; border-radius: 50%; background: #415066; margin-top: 2px; 
+				  margin-left: 2px; display: none;}
+</style>
+
+
+<div class="inputWrapper">
+	<div class="circle"><div class="inner-circle"></div></div> Add to your purchase
+</div>
+
+
+<script>
+	
+	
+	$(document).ready(function() {
+	
+	$(".learnMore").click(function(){
+
+		if(!$(this).hasClass("active")) {
+			$(".learnMore").removeClass("active");
+			$(".moreDiv").slideUp("slow");
+			$(".morePlus").html("+");
+			$(this).addClass("active");
+			$(this).next(".moreDiv").slideDown("slow");
+			$(this).next(".morePlus").html("-");
+			}
+
+		    else if($(this).hasClass("active")) {
+				$(this).removeClass("active");
+				$(".moreDiv").slideUp("slow");
+				$(".morePlus").html("+");
+			  }
+
+	});
+
+
+});
+
+
+
+</script>
+
+
+
