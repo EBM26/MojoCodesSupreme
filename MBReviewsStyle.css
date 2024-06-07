@@ -1,0 +1,862 @@
+/* ==================================================================================
+    page
+================================================================================== */
+
+.content-block {
+    padding-bottom: 70px;
+}
+
+.review-author p {
+    color: #8E0736;
+    font-weight: bold;
+    margin: 0;
+}
+
+.question-block {
+    width: 94.44444444444444%;
+    display: flex;
+    border-bottom: 1px solid #989B9D;
+    margin-bottom: 30px;
+}
+
+.question-block_title {
+    font-family: Roboto,sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #434343;
+    margin-bottom: 25px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+    .question-block_title.review-group-title {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-left:-80px;
+        width: 109.444444444%;
+        display: none;
+    }
+
+.question-block_title.review-group-title hr {
+    margin:8px 0;
+}
+
+.review-group-title-content{
+  font-family: Roboto,sans-serif;
+  font-size: 24px;
+  color: #0AB2E4;
+  text-transform: uppercase;
+}
+
+.rate-block_inner {
+    width: 76.47058823529412%;
+    margin-bottom: 4px;
+}
+
+.rate-block_inner-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+    .rate-block_inner-item:first-child {
+        border-top: 1px solid #ccc;
+    }
+
+    .rate-block_inner-item .star-rating {
+        font-size: 0;
+        white-space: nowrap;
+        display: inline-block;
+        vertical-align: middle;
+        width: 162px;
+        height: 26px;
+        overflow: hidden;
+        position: relative;
+        background: url(https://az820547.vo.msecnd.net/common-resources/i/star-empty.png) repeat;
+        background-size: contain;
+        margin-right: 30px;
+    }
+
+        .rate-block_inner-item .star-rating i {
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 20%;
+            z-index: 1;
+            background: url(https://az820547.vo.msecnd.net/common-resources/i/full-stars-set.png) repeat;
+            background-size: contain;
+        }
+
+        .rate-block_inner-item .star-rating input {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            opacity: 0;
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            z-index: 2;
+            position: relative;
+        }
+
+            .rate-block_inner-item .star-rating input:hover + i,
+            .rate-block_inner-item .star-rating input:checked + i {
+                opacity: 1;
+            }
+
+        .rate-block_inner-item .star-rating i ~ i {
+            width: 40%;
+        }
+
+            .rate-block_inner-item .star-rating i ~ i ~ i {
+                width: 60%;
+            }
+
+                .rate-block_inner-item .star-rating i ~ i ~ i ~ i {
+                    width: 80%;
+                }
+
+                    .rate-block_inner-item .star-rating i ~ i ~ i ~ i ~ i {
+                        width: 100%;
+                    }
+
+
+    .rate-block_inner-item .star-title {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+
+
+.banner-block {
+    margin-top: 36px;
+    width: 88.33333333333333%; 
+}
+
+.banner-block_inner {
+    border: 3px solid #ccc;
+}
+
+.banner-block .powered-img {
+    width: 100%;
+    padding-top: 10px;
+}
+
+    .banner-block .powered-img img {
+        margin: 0 auto;
+    }
+
+.banner-block-img {
+    margin: 15px 10px 0;
+}
+
+    .banner-block-img img {
+        margin: 0 auto;
+    }
+
+.banner-block-dscr {
+    margin: 0 13px 14px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.banner-block-dscr_title {
+    text-transform: uppercase;
+    font: 700 18px "Arial Black", "Helvetica CY", "Nimbus Sans L", sans-serif;
+    letter-spacing: -1px;
+}
+
+.banner-block-dscr p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin-top: 8px;
+}
+
+
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+    .question-block_title.review-group-title {
+        margin-left:-60px;
+        width: 114.444444%;
+    }
+
+    .rate-block_inner,
+    .question-block {
+        width: 100%;
+    }
+
+    .banner-block-dscr_title {
+        font-size: 16px;
+    }
+
+    .banner-block-dscr p {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .final-rate span {font-size: 14px;}
+
+    br {
+        display: none;
+    }
+
+    .banner-block {
+        width: 100%;
+    }
+
+    .content-block {
+        padding-bottom: 25px;
+    }
+
+    .question-block {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+   
+       .question-block_title.review-group-title {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin-left:0;
+            width: 100%;
+        }
+    
+    .question-block_title{font-size: 18px;}
+
+    .review-block .review-author{flex-direction: column;}
+
+    .review-author .stars-block + .author-verify{margin: 10px 0 !important;}
+
+    .review-block .review-title{font-size: 16px;}
+
+    .rate-block_inner {
+        width: 100%;
+    }
+
+    .rate-block_inner-item {
+        position: relative;
+        padding: 13px 0 14px;
+    }
+
+        .rate-block_inner-item .star-rating {
+            margin: 28px auto 0;
+            display: block;
+            vertical-align: inherit;
+            width: 220px;
+            height: 36px;
+        }
+
+        .rate-block_inner-item .star-title {
+            display: block;
+            vertical-align: inherit;
+            position: absolute;
+            top: 11px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+        }
+}
+
+
+/* ==================================================================================
+    review
+================================================================================== */
+
+.review-page .rate-block_inner {
+    width: 100%;
+}
+
+.rate-block_inner-item .stars-block {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 158px;
+    height: 26px;
+    background: url(https://az820547.vo.msecnd.net/common-resources/i/empty-stars-set.png) no-repeat;
+    background-size: 100% auto;
+    margin-right: 31px;
+}
+
+.rate-block_inner-item .stars-block_value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: url(https://az820547.vo.msecnd.net/common-resources/i/full-stars-set.png) no-repeat;
+    background-size: 158px auto;
+}
+
+.review-block {
+    margin-top: 18px;
+    width: 94.44444444444444%; /*510px*/
+}
+
+    .review-block .review-author {
+        font-size: 16px;
+        font-family: Roboto,sans-serif;
+        color: #434343;
+        display: flex;
+    }
+
+.review-author .author-verify {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+    .review-author .author-verify i {
+        display: inline-block;
+        vertical-align: middle;
+        width: 19px;
+        height: 19px;
+        background: url(https://mojonow.blob.core.windows.net/cmr/t15226/src/c483bdce63b74899a09d2a453743d66e_1.png) no-repeat;
+    }
+
+.review-block .review-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Roboto,sans-serif;
+    color: #000000;
+}
+
+.review-block .review-text {
+    margin-top: 3px;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+    .review-block .review-text.__preview {
+        overflow: hidden;
+        position: relative;
+        max-height: 7em; /* exactly four lines */
+        margin-bottom: -13px;
+        height: auto;
+    }
+
+        .review-block .review-text.__preview:after {
+            content: "";
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 20%;
+            height: 2.2em;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 65%);
+        }
+
+@supports (-webkit-line-clamp: 4) {
+    .review-block .review-text.__preview {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        max-height: 7em; /* I needed this to get it to work */
+        height: auto;
+    }
+
+        .review-block .review-text.__preview:after {
+            display: none;
+        }
+}
+
+.review-block .review-text p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Roboto,sans-serif;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.review-block .review-answers {
+    margin-top: 20px;
+    border: none;
+    padding: 15px 35px;
+    background-color: #F8F9F9;
+    display: none;
+}
+
+    .review-block .review-answers p {
+        font-size: 16px;
+        margin-bottom: 13px;
+        font-family: Roboto,sans-serif;
+        color: #434343;
+    }
+
+    .review-block .review-answers span {
+        font-style: normal;
+        font-weight: 700;
+        margin-left: 3px;
+    }
+
+    .review-block .review-answers .img-icon {
+        display: inline-block;
+        vertical-align: bottom;
+        margin-right: 3px;
+        width: 23px;
+        height: 18px;
+        background: url(https://az820547.vo.msecnd.net/common-resources/i/img-icon.png) no-repeat;
+    }
+
+.review-block .review-photos {
+    margin-top: 25px;
+}
+
+.review-photos .review-photos_title {
+    font: 700 20px "Arial Black", "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
+
+.review-photos .photo-block {
+}
+
+.photo-block .photo-item {
+    position: relative;
+    display: inline-block;
+    width: 30.58823529411765%; /*156px*/
+    padding-top: 29.80392156862745%; /*152px*/
+    margin-top: 17px;
+    margin-left: 3.529411764705882%; /*18px*/
+    border: 2px solid #ccc;
+}
+
+    .photo-block .photo-item:nth-child(3n+1) {
+        margin-left: 0;
+    }
+
+    .photo-block .photo-item img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+
+.review-block .review-comment {
+    border: 2px solid #ccc;
+    background-color: #f6f5f0;
+    margin-top: 40px;
+    padding: 19px 13px 24px;
+}
+
+.review-comment .comment-title {
+    font-size: 18px;
+}
+
+.review-comment .comment-text {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+.review-block .review-link {
+    margin-top: 18px;
+    text-align: right;
+    display: none;
+}
+
+    .review-block .review-link a,
+    a.back-link {
+        display: inline-block;
+        font-size: 14px;
+        text-decoration: underline;
+        color: #59bf22;
+    }
+
+
+@media (max-width: 767px) {
+
+.review-block .review-answers{padding: 15px;}
+.review-block .review-answers p{font-size: 14px;}
+
+    .review-block {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .photo-block .photo-item {
+        width: 88px;
+        padding-top: 88px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+
+    .review-comment .comment-title {
+        font-size: 16px;
+    }
+}
+
+
+.review-block + .review-block {
+    border-top: 1px solid #ccc;
+    margin-top: 32px;
+    padding-top: 18px;
+}
+
+
+    .final-rate .stars-block {
+        position: relative;
+        display: none;
+        vertical-align: middle;
+        margin-left: -5px;
+        width: 254px;
+        height: 40px;
+        background: url(https://az820547.vo.msecnd.net/common-resources/i/empty-stars-set.png) no-repeat;
+        margin-right: 5px;
+    }
+
+    .final-rate .stars-block_value {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: url(https://az820547.vo.msecnd.net/common-resources/i/full-stars-set.png) no-repeat;
+    }
+
+    .final-rate span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        font-family: Roboto,sans-serif;
+        color: #434343;
+    }
+
+    .final-rate .rate-percent {
+        margin: 25px 0;
+    }
+
+.rate-percent, .rate-percent span {
+    font-size: 24px;
+    font-family: Roboto,sans-serif;
+    color: #434343;
+    vertical-align: baseline;
+}
+
+
+.review-author .stars-block {
+    position: relative;
+    display: none;
+    vertical-align: middle;
+    width: 158px;
+    height: 26px;
+    background: url(https://az820547.vo.msecnd.net/common-resources/i/empty-stars-set.png) no-repeat;
+    background-size: 100% auto;
+    margin-right: 5px;
+}
+
+.review-author .stars-block_value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: url(https://az820547.vo.msecnd.net/common-resources/i/full-stars-set.png) no-repeat;
+    background-size: 158px auto;
+}
+
+.review-author .stars-block + .author-verify {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-top: 0;
+    order: 1;
+    margin-left: 15px;
+}
+
+
+
+
+.pagination-block {
+    border-top: 2px solid #434343;
+    width: 94.44444444444444%;
+    margin: 35px 0 35px;
+    padding: 25px 20px 24px 0;
+}
+
+    .pagination-block .pagination-text {
+        float: left;
+        width: 50%;
+        font-size: 18px;
+        font-family: Roboto,sans-serif;
+        color: #434343;
+    }
+
+    .pagination-block .pagination-links {
+        float: left;
+        width: 50%;
+        text-align: right;
+    }
+
+        .pagination-block .pagination-links a, .review-block .review-link a, a.back-link {
+            display: inline-block;
+            font-size: 18px;
+            text-decoration: none;
+            color: #00AEEF;
+        }
+
+            .pagination-block .pagination-links a:first-child {
+                position: relative;
+                margin-right: 15px;
+            }
+
+                .pagination-block .pagination-links a:first-child:after {
+                       content: "";
+                        width: 1px;
+                        height: 24px;
+                        background-color: #434343;
+                        position: absolute;
+                        right: -9px;
+                        top: 0px;
+                }
+
+
+
+.filter-block {
+    width: 100%;
+    background-color: #ccc;
+    margin-top: 40px;
+    margin-bottom: 23px;
+}
+
+    .filter-block .filter-block_title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 11px 19px 10px;
+    }
+
+        .filter-block .filter-block_title i {
+            display: none;
+        }
+
+.filter-block_form {
+    background-color: #fff;
+    margin: 0 2px 2px;
+    padding: 0 14px 16px;
+}
+
+.filter-block_form-row {
+    margin-top: 17px;
+    margin-bottom: 23px;
+}
+
+    .filter-block_form-row label {
+        width: 100%;
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .filter-block_form-row select {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .filter-block_form-row .chosen-container {
+        width: 100% !important;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+.chosen-container-single .chosen-single {
+    padding: 6px 0 0 14px;
+    height: 37px;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #e4e4e4 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e4e4e4));
+    background: -webkit-linear-gradient(top, #fefefe 0%,#e4e4e4 100%);
+    background: -o-linear-gradient(top, #fefefe 0%,#e4e4e4 100%);
+    background: -ms-linear-gradient(top, #fefefe 0%,#e4e4e4 100%);
+    background: linear-gradient(to bottom, #fefefe 0%,#e4e4e4 100%);
+}
+
+.chosen-container .chosen-results {
+    margin: 0;
+    padding: 0;
+}
+
+    .chosen-container .chosen-results li {
+        padding: 5px 14px;
+    }
+
+        .chosen-container .chosen-results li.highlighted {
+            background: #ccc;
+        }
+
+.chosen-container-active .chosen-single {
+    border-color: #aaa;
+}
+
+.chosen-container-single .chosen-single div {
+    width: 23px;
+}
+
+    .chosen-container-single .chosen-single div b,
+    .chosen-container-active.chosen-with-drop .chosen-single div b {
+        background: url(https://az820547.vo.msecnd.net/common-resources/i/chosen-arrow.png) no-repeat;
+        background-position: 50% 50%;
+    }
+
+.filter-block_form .btn--search {
+    width: 100%;
+    font-size: 18px;
+    line-height: 42px;
+    margin-top: 30px;
+}
+
+@media (max-width: 979px) and (min-width: 768px) {
+
+    .rate-percent span, .rate-percent {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+
+    .filter-block .filter-block_title i {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .filter-block_form {
+        display: none;
+    }
+
+    .rate-block_inner-item .stars-block {
+        margin: 28px auto 0;
+        display: block;
+        vertical-align: inherit;
+        width: 228px;
+        height: 36px;
+    }
+
+    .rate-block_inner-item .stars-block_value {
+        background-size: 228px auto;
+    }
+
+    .final-rate {
+        text-align: center;
+    }
+
+        .final-rate .stars-block {
+            margin: 0 0 13px;
+        }
+
+        .final-rate .rate-percent {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 18px;
+        }
+
+    .rate-percent span {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .pagination-block {
+        width: auto;
+        margin: 37px 10px 18px;
+        padding: 25px 10px 25px 0;
+    }
+
+        .pagination-block .pagination-text,
+        .pagination-block .pagination-links a {
+            font-size: 12px;
+        }
+
+        .pagination-block + a.back-link {
+            margin-left: 10px;
+        }
+}
+
+.merchant-response-block{
+   font-size: 14px;
+}
+
+.merchant-response-block textarea {
+   width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 16px;
+    font-family: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    font-size: 14px;
+    border-radius: 0;
+    box-shadow: none;
+   min-height: 166px;
+    resize: none;
+}
+
+.edited-by-reviewer {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 12px;
+   
+}
+
+@media (max-width: 767px) {
+    .edited-by-reviewer {
+        text-align: center;
+      min-height: 116px;
+      padding: 13px;
+      font-size: 16px;
+    }
+}
+
+.reviewer-location-wr {
+        padding-top: 60%;
+        position: relative;
+        margin: 20px 0;
+    }
+
+.reviewer-location {
+   margin: 0;
+   width: 100%;
+   height: 100% !important;
+   position: absolute;
+   top: 0px;
+}
+
+/*-------------------------errors and some global styles--------------------------------*/
+
+.troodat-api-error {
+   font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+   font-size: 18px;
+    line-height: 1.3;
+}
+
+.sublink {
+   background: #fff !important;
+}
+
+.thank-text-wr {
+    text-align: center;
+    margin-top: 15%;
+}
+
+.thank-text-wr p{
+    font-family: Helvetica, Arial, 'Nimbus Sans L', sans-serif;
+    font-size: 2.0em;
+    line-height: 1.3;
+}
+
+@media (max-width: 767px) {
+    .thank-text-wr {
+        margin-top: auto;            
+    }
+}

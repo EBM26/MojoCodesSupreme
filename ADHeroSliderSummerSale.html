@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<title>AD Hero Slider</title>
+	<style>
+  		.TOPslide2{background: url(https://mojonow.blob.core.windows.net/cmr/t10591/src/70fb7342cb91488a9bd307188e757b51_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslide3{background: url(https://mojonow.blob.core.windows.net/cmr/t10591/src/ab2c556cdfff4b5fb31aab4fef496e9c_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslide6{background: url(https://mojonow.blob.core.windows.net/cmr/t10591/src/9872c9ae69944136948f2d3ecdc4af02_1.jpg) center no-repeat; background-size: cover;}
+		.TOPslideP{font-size: 20px; margin: 0; margin-bottom: 20px;
+			    font-family: 'Open Sans', sans-serif;}
+	    .TOPbigP{font-size: 30px; font-weight: bold;}
+	    .TOPtextCol{ max-width: 450px; margin: auto; text-align: center; background: rgba(255, 255, 255, 0.35); padding: 20px 30px;}
+	    .slideButton{color: #ffffff; font-size: 18px; padding: 10px 15px; margin: auto;
+			    font-family: 'Open Sans', sans-serif; text-align: center; font-weight: bold;
+				max-width: 140px; background: #FF904D; margin-top: 30px;
+				-webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.25), 0 2px 3px 0 rgba(0, 0, 0, 0.5);
+                box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.25), 0 2px 3px 0 rgba(0, 0, 0, 0.5);}
+		.carousel-cell {width: 100%; padding: 50px 0 250px;}
+		.flickity-page-dots{bottom: 100px !important;}
+		.whiteColor{color: #ffffff !important;}
+
+
+
+		@media only screen and (max-width: 1023px) {
+			.carousel-cell{padding: 25px 0 220px;}
+			.TOPbigP{font-size: 24px; }
+			.TOPtextCol{margin: auto !important; float: none !important;}
+		}
+		
+		@media only screen and (max-width: 767px) {
+			.TOPslideP{font-size: 16px;}
+			.TOPbigP{font-size: 22px;}
+			.carousel-cell{padding: 25px 0 200px;}
+			.TOPtextCol{padding: 0 25px;}
+			.TOPslide2{background-position: -40px;}
+			.TOPslide3{background: url(https://mojonow.blob.core.windows.net/cmr/t10591/src/ab2c556cdfff4b5fb31aab4fef496e9c_1.jpg) right no-repeat; background-size: cover;}
+		}
+ </style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="main-carousel js-flickity" data-flickity='{ "autoPlay": true }'>
+  				<div class="carousel-cell TOPslide2">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">AirDoctor 5000</h1>
+						<p class="TOPslideP">Our most powerful - and quiet - purifier yet. It delivers high performance purification with ease for those extra large spaces and high ceilings.</p>
+						<a href="/purifiers"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+  				<div class="carousel-cell TOPslide3">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">AirDoctor 1000</h1>
+						<p class="TOPslideP">Small but mighty purifications designed to tackle pollutants in smaller spaces like kid’s bedrooms and home offices.</p>
+						<a href="/purifiers"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+  				<div class="carousel-cell TOPslide6">
+  					<div class="TOPtextCol">
+						<h1 class="TOPslideP TOPbigP">AirDoctor 3000</h1>
+						<p class="TOPslideP">Our classic purifier remains a tried and true defender of clean air for homes of every size, cleaning the air in master bedrooms, living rooms, kitchens and more </p>
+						<a href="/purifiers"><div class="slideButton">ORDER NOW</div></a>
+					</div>
+  				</div>
+			</div>
+
+	</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.main-carousel').flickity({
+  					cellAlign: 'center',
+  					freeScroll: true,
+  					autoPlay: 5000
+
+  				});
+			});
+		</script>
+
+
+	</body>
+	</html>

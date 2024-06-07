@@ -1,0 +1,16 @@
+
+
+
+<style>
+.question-block, .question-block_title{display: none !important;}
+.review-block{font-family: 'League Spartan', sans-serif; color: #334A35;}
+.review-block .review-answers{border: none; margin: 20px 15px; padding: 30px;
+							  display: flex; box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.08);
+							  border-radius: 20px; text-align: center;}
+.review-block .review-answers span{margin-left: 0; display: block; margin-top: 10px;}
+  .merchant-response-block{display: none !important;}
+  .review-group-title-content{padding-left: 85px !important;}
+  		@media only screen and (max-width: 767px) {
+	      .review-group-title-content{padding-left: 0px !important;}
+		}
+</style>

@@ -1,25 +1,51 @@
 <style>
 .overlay{width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; cursor: pointer; background-color:rgba(119, 119, 119, 0.7); display: none;
 		 -webkit-animation: fadein .5s; animation: fadein .5s; z-index: 200; overflow: scroll;}
-.close-overlay{right: 24%; top: 16%; z-index: 100; cursor: pointer; padding: 5px 10px; position:fixed; color: #fff;
-			  font-size: 20px; background: #000; border: 3px solid #fff; border-radius: 50%;}
-.vidPad{height: 100%; left: 0; position: fixed; top: 0; width: 50%; right: 0; margin: 10% auto 0;}
-@media only screen and (max-width: 1023px) {
-.vidPad{width: 100%;}
-.close-overlay{right: 0; top: 5%;}
-}
+.close-overlay{right: 0; top: 0; z-index: 100; cursor: pointer; padding: 5px 10px; position:absolute; color: #fff; font-size: 20px;}
+.overlay-content{background: #A2DCED; padding: 1px 30px 30px; font-size: 16px; font-family: 'Montserrat', sans-serif; position: relative;
+				 max-width: 600px; margin: 30px auto;}
+.founder{font-size: 20px;}
+.title{font-size: 35px; font-weight: bold;} 
+
 @media only screen and (max-width: 767px) {
-.close-overlay{top: 3%;}
+  .overlay-content{padding: 10px 15px 10px;}
+  .founder{font-size: 18px; margin:  10px 0;}
+  .title{font-size: 25px; margin: 10px 0;} 
 }
  </style>
 	<div class="overlay">
 			<div class="row">
-				<div class="container relative">
-			<div class="overlay-content"><div class="close-overlay">X</div>
-			<script src="https://fast.wistia.com/embed/medias/m7hsmlcja4.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding vidPad" style="position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_m7hsmlcja4 videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
-		</div>
+				<div class="container">
+			<div class="overlay-content">
+				<div class="close-overlay">X</div>
+				<p class="title"></p>
+				<p class="founder"><i>Founder + CO-CEO</i></p>
+				<p class="content"></p>
+		    </div>
 			</div> <!-- end of container -->
 		</div> <!-- end of row and overlay -->
-		</div> 
+</div> 
 
 
+<script>
+	$(document).ready(function() {
+
+		  $(".fullBio").click(function(){
+			$(".overlay").fadeIn();
+			if ($(this).hasClass("bioPeter")) {
+				$(".title").html("Peter Spiegel");
+				$(".content").html("Lots of little kids dream about what they want to be when they grow up. But what Peter Spiegel dreamt of, as a grade-schooler in Long Island, NY, was how he could make the world a better place for everyone. A specific career path was yet to emerge, but his inner consciousness spoke clearly: He should be of service to the world and take on its greatest challenges.<br><br>Graduating from high school, Peter became immersed in a quest to understand his life's purpose and how to achieve permanent happiness. He lived and worked on an organic farm in the foothills of the Smoky Mountains. Seeking to improve himself –– and to enhance the lives of others and help them thrive –– he studied and taught meditation. He learned Chinese medicine with world-renowned doctors in London and lectured on alternative medicine in New York City. He then rolled all of his experiences, plus coursework in anatomy and physiology, into a degree in Human Development from the State University of New York. After graduation, desiring to earn a living consistent with his values, Peter bootstrapped a small natural foods company into a successful business, which he sold in 1989.<br><br>Seeking to have a bigger platform for his ideas, Peter then became a pioneer in the emerging television direct to consumer marketing channel, coupling mass communication with first-of-their-kind product innovations –– providing real solutions to real problems. His innovations were in such demand that they were sought out and sold at big box stores like Walmart, Bed Bath and Beyond, Target and Costco, making them accessible to everyone.<br><br>In 2007, Peter bought out his business partners and committed to dedicate his product innovation, marketing skills and all the resources of his company to improve the health and quality of life of his customers. On that principle, he was joined by his life partner, Katie Williams, to found Ideal Living, an ethical and socially responsible company with the mission to ensure everyone has access to pure air and water, and a solid foundation for wellness. All these years later, Peter Spiegel has found the happiness he searched for in his life's purpose of serving others.");
+			}
+
+			else {
+				$(".title").html("Katie Williams");
+				$(".content").html("What compelled Katie Williams to hop on her bike and become the very first girl in her upstate New York hometown to have a paper route? Probably the same reason she cycled all the way to Nova Scotia at just 17, spent two weeks snowshoeing in the Adirondack Mountains in subzero temperatures and travelled the world immersing herself in meditation and service. She's a seeker. Someone who lives her values, and leads with an open heart. She walks the walk when it comes to socially conscious initiatives, donating her time and financial support to projects that educate and uplift communities in need around the world. But being an adventurous, genuine and caring human being is really just one item on Katie's long list of accolades.<br><br>An entrepreneur and trailblazer for women in the workplace, Katie Williams has helped define the direct to consumer and wellness industries for thirty four years.<br><br>She earned her Bachelor of Science in Economics at Cornell University in 1983 before rising to success early in her career. With a keen eye for telling compelling stories and connecting with an audience through direct response television, Katie founded Williams Television Time, Inc in 1987, becoming the first woman to own a Direct to Consumer TV marketing agency. She expanded into global marketing just five years later, founding Williams Worldwide Television and had the largest women-owned business in Los Angeles.<br><br>With her expertise in positioning products in a way that makes consumers at home feel at ease and engaged, Katie continued to make her mark, earning awards across the cable TV, satellite media and online direct marketing arenas, including being honored with the 2011 Lifetime Achievement Award by the Electronic Retailing Association. But it's not awards Katie is most proud of. It's being a mentor and providing so many opportunities to women, men, minorities, immigrants and people of color –– watching as they've gone out into the world to start their own successful, impactful businesses.<br><br>These days, as co-CEO of Ideal Living, Katie loves trying new things and diving into data to find out what works best. But at the end of the day, she just feels fortunate to lead such a dedicated and diverse team of people as dedicated as she is to creating proven and affordable wellness products that improve lives and help others thrive.");
+			}
+		 });
+ 
+	 	$(".close-overlay").click(function(){
+			$(".overlay").fadeOut();
+		});
+
+	});
+</script>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- taken from this tutorial https://www.youtube.com/watch?v=sqkozb5UCcs&ab_channel=CodingCreate  -->
+	<title>Responsive Product Slider</title>
+	<style>
+		.details p{font-size: 20px; margin: 0; padding: 0px; text-align: center; 
+		  font-family: 'Open Sans', sans-serif;}
+		.controlDiv{
+				    display: flex;
+				    align-items: center;
+				    padding: 10px;
+				    justify-content: space-between;
+				}
+	    .controlDiv  span {
+			font-size: 40px;
+		    margin: 0 5px;
+		    cursor: pointer;
+		    color: #555;
+		     width: 30px;
+		    height: 30px;
+		    display: inline-block;
+		    line-height: 19px;
+		    text-align: center;
+		    border-radius: 3px;
+		    position: absolute;
+		    top: 50%;
+		    z-index: 10000;
+		}
+
+		.controlDiv  span:hover{background: #222; color: #fff;}
+		#rightSpan{right: 0;}
+		#leftSpan{left: 0;}
+
+		.productWrapper{
+			width: 98%;
+			margin: auto;
+			display: flex;
+			align-items: center;
+			overflow-x: auto;
+		}
+		.productWrapper::-webkit-scrollbar{
+			display: none;
+		}
+		.productWrapper .product{
+			min-width: 24%;
+			height: 90%;
+			margin:  0 20px  0 0;
+			border-radius: 20px;
+			position: relative;
+			left: 0;
+			transition: 0.5s;
+
+		}
+		.imgDiv{
+			width: 100%;
+			height: 70%;
+			padding: 20px 0;
+			display: flex;
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+		.imgDiv img{
+			max-width: 100%;
+			margin: auto;
+		}
+
+
+		@media (max-width: 1023px) {
+           	.productWrapper .product{min-width: 41%;}
+		}
+
+
+		@media (max-width: 767px) {
+	        .productWrapper{padding: 0 10px;}
+			.productWrapper .product {
+				min-width: 100%;
+				margin:  0 10px  0 0;
+			}
+			.detail, .button{
+				font-size: 16px;
+			}
+			.clickButton{
+				padding: 6px 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container" style="position: relative;">
+		<div class="controlDiv">
+			<span  class="lSpan" id="leftSpan">&#139;</span>
+			<span class="rSpan" id="rightSpan">&#155;</span>
+		</div>
+	<div class="productWrapper">
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/6cb66ceaf3dd4804a4b541033a0e94f3_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Rock n’ Chef Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/faeebdb0686b4e2eb8e272b7eab28a78_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Chop & Scoop Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/e247869bd3cd4903beb44e083d69d383_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Cheese Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/f2da5fecf36c4434a1e701404df4e633_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Paring Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/d87a80982d454151b555e82c73656913_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Fillet Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/68fde56dc2044b309f04c5b4311d44c5_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Carving Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/f2da5fecf36c4434a1e701404df4e633_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Steak Knife</p>
+			</div>
+		</div>
+
+		<div class="product">
+			<div class="imgDiv">
+				<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/590d4c4e182f4e20ad1323cfb49a9bd6_1.png" alt="">
+			</div>
+			<div class="details">
+				<p>Slicer Knife</p>
+			</div>
+		</div>
+		
+	
+		
+	 </div><!--  end of productWrapper -->
+
+	</div><!--  end of conainter -->
+	<script>
+	let span = document.getElementsByTagName('span');
+	let product = document.getElementsByClassName('product')
+	let product_page = Math.ceil(product.length/4);
+	let l = 0;
+	let movePer = 25.34;
+	let maxMove = 133;
+	let tab_view = window.matchMedia("(max-width: 950px)");
+	if (tab_view.matches) {
+	 	movePer = 102;
+	 	maxMove = 350;
+	 };
+	let mob_view = window.matchMedia("(max-width: 767px)");
+	if (mob_view.matches) {
+	 	movePer = 102;
+	 	maxMove = 800;
+	 };
+
+	let right_mover = ()=>{
+		l = l + movePer;
+		if (product == 1){l = 0; }
+		for(const i of product) {
+			if (l > maxMove){l = l - movePer;}
+			i.style.left = '-' + l + '%';
+		}
+
+	};
+	let left_mover = ()=>{
+		l = l - movePer;
+		if (l<=0){l = 0;}
+		for(const i of product) {
+			if (product_page>1) {
+				i.style.left = '-' + l + '%';
+			}
+		}
+	};
+ 
+ document.querySelectorAll('.rSpan').forEach(function(el){ el.addEventListener('click', function(){ right_mover(); }); });
+ document.querySelectorAll('.lSpan').forEach(function(el){ el.addEventListener('click', function(){ left_mover(); }); });
+
+	</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,165 @@
+ <style>
+    .bottomPdes{
+    font-family: 'DM Sans', sans-serif;
+     color: #696969;
+     font-style: italic;
+     text-align: center;
+     font-size: 12px;
+     margin: 0 15px;
+}
+ .priceChange s.alt {
+    color:red;
+}
+ .priceChange s span.txt-b {
+    color:#000000!important;
+}
+ .difSelect, .plusSelect, .smartSelect{
+    display: none;
+}
+ .switchButt{
+    color: #ECAB2F;
+     padding: 6px 0;
+     text-align: center;
+     border: 2px solid #ECAB2F;
+     max-width: 200px;
+     margin: 10px auto;
+     border-radius: 70px;
+     font-family: 'League Spartan', sans-serif;
+     letter-spacing: 1px;
+     cursor: pointer;
+}
+ .switchButt:hover, .activeButt{
+    color: #FFF;
+     background: #ECAB2F;
+     font-weight: bold;
+}
+ .selectRow .grid__column .grid__cell:hover{
+     background-color: #E6FAFF !important;
+     cursor: pointer;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+ </style>
+<div class="switchButt smartButt">AromaTru Smart</div>
+<p class="bottomPdes"><i>Designer Cover <br>Infinite Variable Light Show Smart App Technology</i></p>
+
+
+
+ <script>
+ 	
+
+
+  $(document).ready(function() {
+
+    $(".classicButt").click(function() {
+        $(".switchButt").removeClass("activeButt");
+        $(this).addClass("activeButt");
+        $(".priceChange").html("<s class='alt'><span class='txt-b' style='color: #6E6F71 !important;'>$129.95</span></s>");
+        $(".now_price").html("<b>Now $103.96</b>");
+        $(".plusSelect, .smartSelect, .vidPlay, .difSelect").hide();
+        $(".classicSelect, .prodcutImage img, .onePayClassic").show();
+        $(".prodcutImage img, .img1 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/434790e7185b4194b3b11faf1fb17b0c_1.jpg");
+        $(".img2 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/cb7d46322c344707a6b3b78d091fa550_1.jpg");
+        $(".img3 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/4337daeff15647c393f6206996219a56_1.jpg");
+        $(".img4 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/67041fcf88bc4eb19755f5ff4cf376e5_1.jpg");
+        $(".img3").removeClass("smartImg1");
+        $(".threePay").removeClass("activePay");
+        $(".onePay").addClass("activePay");
+        $(".modelName").html("");
+        $(".descText").html("No counting drops, no adding water, no cleaning, no mold and bacteria build-up just pure diffusion — wherever and whenever you want it. AromaTru creates a relaxing, spa-like experience in your bedroom, living room, kitchen, office or den.");
+
+    });
+
+    $(".plusButt").click(function() {
+        $(".switchButt").removeClass("activeButt");
+        $(this).addClass("activeButt");
+        $(".priceChange").html("<s class='alt'><span class='txt-b' style='color: #6E6F71 !important;'>$159.95</span></s>");
+        $(".now_price").html("<b>Now $127.96</b>");
+        $(".classicSelect, .smartSelect, .difSelect, .vidPlay").hide();
+        $(".plusSelect, .prodcutImage img, .onePayPlus").show();
+        $(".prodcutImage img, .img1 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/d649ed3d390a405ea1c4ad4865323870_1.jpg");
+        $(".img2 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t16219/src/c35993b2892d4348bea130f1fc841ba7_1.jpg");
+        $(".img3 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t16295/src/45b12f2218d145cc8445905dc0a16dc8_1.jpg");
+        $(".img4 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/cc72ccf85fd7425eb5e6a17a816ceaa2_1.jpg");
+        $(".img3").removeClass("smartImg1");
+        $(".threePay").removeClass("activePay");
+        $(".onePay").addClass("activePay");
+        $(".modelName").html("Plus");
+        $(".descText").html("Personalize your space with a beautiful designer shade cover available in 4 colors to match every decor. Our push button technology allows you to choose how long to diffuse your favorite scent, how much time between atomizing mists, and the total time for your aromatherapy session.");
+
+    });
+
+    $(".smartButt").click(function() {
+        $(".switchButt").removeClass("activeButt");
+        $(this).addClass("activeButt");
+        $(".priceChange").html("<s class='alt'><span class='txt-b' style='color: #6E6F71 !important;'>$209.95</span></s>");
+        $(".now_price").html("<b>Now $167.96</b>");
+        $(".classicSelect, .plusSelect, .difSelect, .vidPlay").hide();
+        $(".smartSelect, .prodcutImage img, .onePaySmart").show();
+        $(".img4 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/cc72ccf85fd7425eb5e6a17a816ceaa2_1.jpg");
+        $(".prodcutImage img, .img1 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18749/src/d649ed3d390a405ea1c4ad4865323870_1.jpg");
+        $(".img2 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t18769/src/35eb5358025142a484a0f8eb99eaa61f_1.jpg");
+        $(".img3 img").attr("src", "https://mojonow.blob.core.windows.net/cmr/t16219/src/633211f70de8498e96dc1bd816fb6423_1.jpg");
+        $(".img3").addClass("smartImg1");
+        $(".threePay").removeClass("activePay");
+        $(".onePay").addClass("activePay");
+        $(".modelName").html("Smart");
+        $(".descText").html("With AromaTru's Smart Diffuser, you can set automated schedules to  start and stop your diffuser for up to 24 hours at a time. Create custom blends and personalized colors to fit any mood. Enjoy one-touch access to our encyclopedia of essential oils curated by world-renowned aromatherapy author and essential oil expert Gabriel Mojay.");
+
+    });
+
+});
+
+
+
+
+$(document).ready(function() {
+   
+   $(".onePay").click(function() {
+      $(".threePay").removeClass("activePay");
+      $(".panelRow").hide();
+      $(this).addClass("activePay");
+      if ($(".classicButt").hasClass("activeButt")) {
+          $(".offerSelect").hide();
+          $(".onePayClassic").show();
+      }
+
+      else if ($(".plusButt").hasClass("activeButt")) {
+          $(".offerSelect").hide();
+          $(".onePayPlus").show();
+      }
+
+      else {
+        $(".offerSelect").hide();
+        $(".onePaySmart").show();
+      }
+   });
+
+    $(".threePay").click(function() {
+      $(".onePay").removeClass("activePay");
+      $(".panelRow").show();
+      $(this).addClass("activePay");
+      if ($(".classicButt").hasClass("activeButt")) {
+          $(".offerSelect").hide();
+          $(".threePayClassic").show();
+      }
+
+    else if ($(".plusButt").hasClass("activeButt")) {
+          $(".offerSelect").hide();
+          $(".threePayPlus").show();
+      }
+
+      else {
+        $(".offerSelect").hide();
+        $(".threePaySmart").show();
+      }
+   });
+
+});
+
+
+
+
+
+ </script>

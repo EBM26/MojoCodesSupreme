@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<title>AD Hero Slider</title>
+	<style>
+		.container{width: 100%; margin: 60px auto 0; overflow: visible;}
+
+		
+		.carousel-cell {width: 100%; display: flex;}
+		.imgDiv {max-width: 100%; display: flex;}
+		.imgDiv img{max-width: 50%;}
+
+		
+		@media only screen and (max-width: 767px) {
+			.imgDiv {display: block;}
+		}		
+	</style>
+	</head>
+	<body>
+		
+		<div class="container">
+
+			<div class="main-carousel js-flickity" data-flickity='{ "autoPlay": true }'>
+  				<div class="carousel-cell">
+  					<div class="imgDiv">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/13e266bdc93a4cff9c68c0ca49e5e541_1.jpg" alt=""><img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/e33f76691c784d64827a5ec0eb8f9380_1.jpg" alt="">
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="imgDiv">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/8b9a9e96ede643d4b43ee5096ce3237e_1.jpg" alt=""><img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/1841edc2f3bd4404aea0e5459982cce2_1.jpg" alt="">
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="imgDiv">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/7db41b6530d248b2ac910675022d845d_1.jpg" alt=""><img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/56aa266c17994e10acc3ccb6be307262_1.jpg" alt="">
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="imgDiv">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/d1182aaa68f04505a4b66dfd5e9e3bef_1.jpg" alt=""><img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/39994dbd765f4dd4901b74cf37b2ecab_1.jpg" alt="">
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="imgDiv">
+						<img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/ed8220ad6b8848929d1d77fde656d6d1_1.jpg" alt=""><img src="https://mojonow.blob.core.windows.net/cmr/t18159/src/bc918bcf420b41eebcf637c716186ba1_1.jpg" alt="">
+					</div>
+  				</div>
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.main-carousel').flickity({
+  					cellAlign: 'center',
+  					freeScroll: true,
+  					autoPlay: 5000
+
+  				});
+			});
+		</script>
+
+
+	</body>
+	</html>

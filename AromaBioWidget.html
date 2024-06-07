@@ -1,0 +1,19 @@
+ $(document).ready(function() {
+
+          $(".fullBio").click(function(){
+            $(".overlay").fadeIn();
+            if ($(this).hasClass("bioPeter")) {
+                $(".title").html("Peter Spiegel");
+            }
+
+            else {
+                $(".title").html("Katie Williams");
+                $(".content").html("What compelled Katie Williams to hop on her bike and become the very first girl in her upstate New York hometown to have a paper route? Probably the same reason she cycled all the way to Nova Scotia at just 17, spent two weeks snowshoeing in the Adirondack Mountains in subzero temperatures and travelled the world immersing herself in meditation and service. She’s a seeker. Someone who lives her values, and leads with an open heart. She walks the walk when it comes to socially conscious initiatives, donating her time and financial support to projects that educate and uplift communities in need around the world. But being an adventurous, genuine and caring human being is really just one item on Katie’s long list of accolades.<br><br>An entrepreneur and trailblazer for women in the workplace, Katie Williams has helped define the direct to consumer and wellness industries for thirty-four years.<br><br>She earned her Bachelor of Science in Economics at Cornell University in 1983 before rising to success early in her career. With a keen eye for telling compelling stories and connecting with an audience through direct response television, Katie founded Williams Television Time, Inc in 1987, becoming the first woman to own a Direct to Consumer TV marketing agency. She expanded into global marketing just five years later, founding Williams Worldwide Television and had the largest woman-owned business in Los Angeles.<br><br>With her expertise in positioning products in a way that makes consumers at home feel at ease and engaged, Katie continued to make her mark, earning awards across the cable TV, satellite media and online direct marketing arenas, including being honored with the 2011 Lifetime Achievement Award by the Electronic Retailing Association. But it’s not awards Katie is most proud of. It’s being a mentor and providing so many opportunities to women, men, minorities, immigrants and people of color –– watching as they’ve gone out into the world to start their own successful, impactful businesses.<br><br>These days, as Co-CEO of Ideal Living, Katie loves trying new things and diving into data to find out what works best. But at the end of the day, she just feels fortunate to lead such a dedicated and diverse team of people as dedicated as she is to creating proven and affordable wellness products that improve lives and help others thrive.");
+            }
+         });
+ 
+        $(".close-overlay").click(function(){
+            $(".overlay").fadeOut();
+        });
+
+    });

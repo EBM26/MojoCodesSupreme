@@ -1,0 +1,1 @@
+<script type="text/javascript">    window.onload = function() { document.body.innerHTML = document.body.innerHTML.replace(/\u2028/g, 'Y'); }    </script>

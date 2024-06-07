@@ -1,0 +1,197 @@
+<style>
+    .select-button {
+        padding: 10px;
+        margin: 10px 5px 5px;
+        display: block;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        width: 95%;
+        border-radius: 30px;
+        background-color: #dee4e6;
+        font-size: 20px;
+        font-family: Lato, sans-serif;
+        line-height: inherit;
+        font-weight: 700;
+        font-style: inherit;
+        color: #242f35;
+        text-transform: inherit;
+    }
+
+    .select-button:hover {
+        background: #7b919d;
+        color: #fff;
+    }
+
+    .select-button.active {
+        background: #7b919d;
+        color: #fff;
+    }
+
+    .widget-text-cs {
+        margin: 20px 0 5px 0;
+        font-size: 25px;
+        font-family: 'Barlow', sans-serif; 
+        text-align: center;
+        line-height: inherit;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+
+    }
+
+    .add-btn a {
+        cursor: default;
+
+    }
+
+    .add-btn a.active {
+        cursor: pointer;
+
+    }
+
+    .selectQBottom {
+        font-size: 22px;
+        border: 3px solid #9CADB5;
+        background: #fff;
+        width: 80px;
+        height: 40px;
+        margin: 7px auto;
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: 1060px) {
+        .selectQBottom {
+            font-size: 22px;
+            width: 50px;
+            height: 35px;
+        }
+    }
+
+    .item-box {
+       /* border: 1px solid #dee4e6;*/
+        padding: 10px;
+    }
+
+    .item-box .widget-text {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    .item-box .item-price {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    .item-box .item-quantity {
+        float: left;
+        padding: 3px 10px 0 0;
+    }
+
+    .item-box .item-remove {
+        font-weight: 500;
+        color: #0066b1;
+        cursor: pointer;
+    }
+    
+    .item-quantity{
+        display: block;
+        float: left;
+        margin: 15px;
+    }
+    .selectQBottom{
+      display: inline-block;
+      float: left;
+    }
+    .item-price{
+      color: #303a40;
+    }
+    .item-size{
+      color: #303a40;
+    }
+}
+
+
+  @media only screen and (max-width: 767px) {
+        .genderRow{flex-direction: inherit;}
+        .genderRow .area--6{flex: 1;}
+        .sizeRow{display: block;}
+        .sizeRow .area--4{width: 150px; display: inline-block;}
+        .sizeRow .fLeft{float: left;}
+        .sizeRow .fRight{float: right;}
+    }
+    
+</style>
+<div class="grid">
+    <div class="grid__row genderRow">
+        <div class="grid__column area--6">
+            <div class="grid__cell">
+                <button data-type="women" class="select-button">Women's</button>
+            </div>
+        </div>
+        <div class="grid__column area--6">
+            <div class="grid__cell">
+                <button data-type="men" class="select-button">Men's</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="widget-text-cs">Select Size</div>
+<div class="grid" data-gender="women">
+    <div class="grid__row sizeRow">
+        <div class="grid__column area--4 fLeft">
+            <div class="grid__cell">
+                <button data-size="6" class="select-button">4.5 - 6</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fRight">
+            <div class="grid__cell">
+                <button data-size="8" class="select-button">6.5 - 8</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fLeft">
+            <div class="grid__cell">
+                <button data-size="10" class="select-button">8.5 - 10</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fRight">
+            <div class="grid__cell">
+                <button data-size="12" class="select-button">10.5 - 12</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="grid" data-gender="men" style="display:none">
+    <div class="grid__row">
+        <div class="grid__column area--4 fLeft">
+            <div class="grid__cell">
+                <button data-size="7" class="select-button">5.5 - 7</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fRight">
+            <div class="grid__cell">
+                <button data-size="9" class="select-button">7.5 - 9</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fLeft">
+            <div class="grid__cell">
+                <button data-size="11" class="select-button">9.5 - 11</button>
+            </div>
+        </div>
+        <div class="grid__column area--4 fRight">
+            <div class="grid__cell">
+                <button data-size="13" class="select-button">11.5 - 13</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="15" class="select-button">13.5 - 15</button>
+            </div>
+        </div>
+    </div>
+</div>
+

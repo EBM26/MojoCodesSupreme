@@ -1,0 +1,52 @@
+<style>
+    #popupWrapper {visibility: hidden; z-index: 10002;  position: fixed;
+            opacity: 0; transform: scale(0.5); transition: transform 0.2s, opacity 0.2s, 
+            visibility 0s 0.2s; margin: 0 auto;
+              width: 100%; height: 100%; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 45, 82, 0.4);}
+    #popup h4{color: #0F2D52; font-size: 40px; font-weight: bold; text-align: center;}
+    #popup h2{color: #000; font-size: 20px; position: absolute; top: 20px; right: 20px;}
+    #popup{width: 500px; border:1px solid #084A72; background-color: #FFFFFF;
+            box-shadow: 0 -1px 30px 0 #000000;color: #fff; font-size: 2rem; position: absolute;
+            top: 50%;left: 50%;  transform: translate(-50%, -50%) scale(0.82183) translateZ(0px);
+          padding: 30px; border-radius: 20px;}
+      .clear{clear: both;}
+      #popup p{font-size: 18px; color: #0F2D52; margin: 20px 0;}
+      a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+      .buttonDiv{display: flex; margin-top: 30px;}
+      .buttonExit{width: 210px; flex: 1; border-radius: 30px; text-align: center; padding: 15px 10px;
+                  font-size: 24px;}
+      .buttonVid{background: #E85040; margin-right: 15px;}
+      .buttonTrans{background: #084A72; margin-left: 15px;}
+      .watchVid, .buttonExit{cursor: pointer;}
+
+
+
+       
+
+@media only screen and (max-width: 1024px) {
+  #popup{top: 30%;}
+ }
+
+@media only screen and (max-width: 767px) {
+  #popup{max-width: 340px;}
+  .buttonDiv{display: block;}
+  .buttonExit{width: 250px !important; margin: auto !important;}
+  .buttonTrans{margin-top: 20px !important;}
+
+ }
+</style>
+
+    <div id="popupWrapper">
+       <div id="popup">
+           <h4>WAIT</h4>
+           <h2 class="watchVid">X</h2>
+           <p>By clicking out of this page, you'll miss the opportunity to learn about a simple solution to address the symptoms of an aging prostate.</p>
+           <p>Click <span class="watchVid"><u>Watch Video</u></span> to continue watching.</p>
+           <p>Or click <a href="/transcript"><u>Read Transcript</u></a> to read all about this solution instead.</p>
+         <div class="buttonDiv">
+          <div class="buttonExit buttonVid watchVid">Watch Video</div>
+          <a href="/transcript"><div class="buttonExit buttonTrans">Read Transcript</div>
+         </a>
+         </div>
+          </div>
+    </div>

@@ -1,0 +1,135 @@
+<style>
+    .container{max-width: 800px; margin: 40px auto;}
+
+    .progress-bar{background: #e6e6e6; width: 100%; height: 35px; border-radius: 25px; margin: 50px auto;}
+    .inside-progress{background: #f7a660; width: 16%; height: 100%; border-radius: 25px;}
+    .question-div{font-size: 34px; margin-left: 80px; display: none; font-family: Roboto,sans-serif;}
+    .ques-num{font-size: 24px;}
+    .input{position: absolute; z-index: 100; opacity: 0; cursor: pointer; width: 30px; height: 30px;
+         top: -3px; right: -2px;}
+    .checkbox{border: 1px solid #b7b7b7; border-radius: 5px; background-color: #fff; width: 26px; height: 26px; 
+            margin-right: 10px; position: relative; cursor: pointer; display: inline-block; margin-bottom: 20px; vertical-align: -25px;}
+    .checkbox:hover{background: #f7a660;}
+    .active{display: block;}
+    .CTA{background: #ff8124; color: #fff; font-size: 27px; font-weight: bold; text-align: center; width: 230px; 
+          margin: 30px auto; padding: 6px 0 4px; cursor: pointer; display: none; transition: all .4s ease-in-out;}
+    .CTA:hover{transform: scale(1.1);}
+    .padbot40{padding-bottom: 40px;}
+    .orange-check{position: absolute; max-width: 130%; top: -4px; display: none;}
+    .special-font{width: 700px; margin: auto;}
+    .quizLabel{display: inline-block; font-size: 25px;}
+
+    @media only screen and (max-width: 767px) {
+       .question-div{font-size: 26px; margin-left: 0px; padding: 0 15px;}
+       .quizLabel{font-size: 20px;}
+
+    }
+  </style>    
+  <div class="container padbot40 question-container">
+      <div class="progress-bar"> <div class="inside-progress"></div> </div>
+      <div class="question-div active" id="question1">
+        <p class="ques-num">1 of 6</p>
+        <p class="marbot25 martop10"><b>How often do you experience joint pain?</b></p>
+        <div class="checkbox"><input type="radio" name="gender" class="input" value="male"></div> <label class="quizLabel" for="male">Once a day</label> <br>
+        <div class="checkbox"><input type="radio" name="gender" class="input" value="male"></div> <label class="quizLabel" for="male">Once a week</label> <br>
+        <div class="checkbox"><input type="radio" name="gender" class="input" value="male"></div> <label class="quizLabel" for="male">Every time I exercise</label> <br>
+        <div class="checkbox"><input type="radio" name="gender" class="input" value="female"></div>  <label class="quizLabel"  for="female">Every so often</label>
+      </div>
+      <div class="question-div" id="question2">
+        <p class="ques-num">2 of 6</p>
+        <p class="marbot25 martop10"><b>How would you best describe your pain?</b></p>
+        <div class="checkbox"><input type="radio" name="age" class="input" value="under"></div>  <label class="quizLabel" for="age">A dull pain</label><br>
+        <div class="checkbox"><input type="radio" name="age" class="input" value="25"></div> <label class="quizLabel" for="age">A sharp pain</label> <br>
+        <div class="checkbox"><input type="radio" name="age" class="input" value="45"></div> <label class="quizLabel" for="age">A numbing pain</label> <br>
+        <div class="checkbox"><input type="radio" name="age" class="input" value="65"></div> <label class="quizLabel" for="age">A burning sensation</label> 
+      </div>
+      <div class="question-div" id="question3">
+        <p class="ques-num">3 of 6</p>
+        <p class="marbot25 martop10"><b>How old are you?</b></p>
+        <div class="checkbox"><input type="radio" name="concern" class="input" value="lines"></div> <label class="quizLabel" for="concern">Under 25 years old</label><br>
+        <div class="checkbox"><input type="radio" name="concern" class="input" value="dry"></div> <label class="quizLabel" for="concern">25-44 years old</label><br>
+        <div class="checkbox"><input type="radio" name="concern" class="input" value="crepey"></div> <label class="quizLabel" for="concern">45-64 years old</label><br>
+        <div class="checkbox"><input type="radio" name="concern" class="input" value="sun"></div> <label class="quizLabel" for="concern">65-84 years old</label><br>
+        <div class="checkbox"><input type="radio" name="concern" class="input" value="sagging"></div> <label class="quizLabel" for="concern">Don't ask!</label>
+      </div>
+      <div class="question-div" id="question4">
+        <p class="ques-num">4 of 6</p>
+        <p class="marbot25 martop10"><b>Where on your body do you have the most issues?</b></p>
+        <div class="checkbox"><input type="radio" name="issues" class="input" value="arms"></div> <label class="quizLabel" for="issues">Back</label><br>
+        <div class="checkbox"><input type="radio" name="issues" class="input" value="neck"></div> <label class="quizLabel" for="issues">Shoulders</label><br>
+        <div class="checkbox"><input type="radio" name="issues" class="input" value="chest"></div> <label class="quizLabel" for="issues">Knees</label><br>
+        <div class="checkbox"><input type="radio" name="issues" class="input" value="knees"></div> <label class="quizLabel" for="issues">Elbows</label><br>
+        <div class="checkbox"><input type="radio" name="issues" class="input" value="elbows"></div> <label class="quizLabel" for="issues">Multiple areas</label>
+      </div>
+      <div class="question-div" id="question5">
+        <p class="ques-num">5 of 6</p>
+        <p class="marbot25 martop10"><b>What have you tried so far to relieve this pain?</b></p>
+        <div class="checkbox"><input type="radio" name="skincare" class="input" value="wrinkles"></div> <label class="quizLabel" for="skincare">Painkillers</label><br>
+        <div class="checkbox"><input type="radio" name="skincare" class="input" value="plumper"></div> <label class="quizLabel" for="skincare">Various doctors</label><br>
+        <div class="checkbox"><input type="radio" name="skincare" class="input" value="plumper"></div> <label class="quizLabel" for="skincare">Massage therapists</label><br>
+        <div class="checkbox"><input type="radio" name="skincare" class="input" value="silkier"></div> <label class="quizLabel" for="skincare">Everything but the kitchen sink</label><br>
+        <div class="checkbox"><input type="radio" name="skincare" class="input" value="lifted"></div> <label class="quizLabel" for="skincare">Nothing</label>
+      </div>
+      <div class="question-div" id="question6">
+        <p class="ques-num">6 of 6</p>
+        <p class="marbot25 martop10"><b>How important is it for you to free yourself of this pain?</b></p>
+        <div class="checkbox"><img src="https://mojonow.blob.core.windows.net/cmr/t10648/src/1af92e6946fc46eb834432ac1dbe1cea_1.png" class="orange-check" alt=""><input type="radio" name="impression" class="input" value="younger"></div> <label class="quizLabel" for="impression">Extremely important</label><br>
+        <div class="checkbox"><img src="https://mojonow.blob.core.windows.net/cmr/t10648/src/1af92e6946fc46eb834432ac1dbe1cea_1.png" class="orange-check" alt=""><input type="radio" name="impression" class="input" value="older"></div> <label class="quizLabel" for="impression">Very Important</label><br>
+        <div class="checkbox"><img src="https://mojonow.blob.core.windows.net/cmr/t10648/src/1af92e6946fc46eb834432ac1dbe1cea_1.png" class="orange-check" alt=""><input type="radio" name="impression" class="input" value="correct"></div> <label class="quizLabel" for="impression">Somewhat important</label><br>
+        <div class="checkbox"><img src="https://mojonow.blob.core.windows.net/cmr/t10648/src/1af92e6946fc46eb834432ac1dbe1cea_1.png" class="orange-check" alt=""><input type="radio" name="impression" class="input" value="correct"></div> <label class="quizLabel" for="impression">I can live with it, it ain't so bad</label>
+        <a href="{D.ORDER_LINK}"><div class="CTA">SUBMIT</div></a>
+      </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+        $(document).ready(function() {
+
+          $(".checkbox").click(function() {
+
+            if ( $("#question1").hasClass("active") ) {
+               $("#question1").removeClass("active");
+               $("#question2").addClass("active");
+               $(".inside-progress").css("width", "20%");
+            }
+
+            else if ( $("#question2").hasClass("active") ) {
+               $("#question2").removeClass("active");
+               $("#question3").addClass("active");
+               $(".inside-progress").css("width", "40%");
+            }
+
+            else if ( $("#question3").hasClass("active") ) {
+               $("#question3").removeClass("active");
+               $("#question4").addClass("active");
+               $(".inside-progress").css("width", "60%");
+            }
+
+            else if ( $("#question4").hasClass("active") ) {
+               $("#question4").removeClass("active");
+               $("#question5").addClass("active");
+               $(".inside-progress").css("width", "80%");
+            }
+
+            else if ( $("#question5").hasClass("active") ) {
+               $("#question5").removeClass("active");
+               $("#question6").addClass("active");
+               $(".inside-progress").css("width", "100%");
+            }
+
+            else if ($("#question6").hasClass("active")) {
+              $(".orange-check").hide();
+              $(this).find(".orange-check").show();
+              $(".CTA").fadeIn();
+            }
+
+          });
+
+      
+      });
+
+
+    </script>

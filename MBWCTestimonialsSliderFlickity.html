@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<title>Miracle Blade Testimonial Slider</title>
+	<style>
+		.container{width: 100%; margin: 60px auto 0; overflow: visible;}
+
+		a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+		.TOPtextCol p{color: #000000; font-size: 16px; margin: 0; padding: 0; line-height: 26px;
+                     font-family: 'Open Sans', sans-serif;}
+	   
+		.flickity-page-dots{display:none !important;}
+        .carousel-cell{padding: 40px 30px 30px; border-radius: 10px; background: #FFFFFF;}
+		.imgStars{max-width: 100px;}
+		.TOPtextCol .name{color: #898989; margin-bottom: 20px;}
+		.TOPtextCol .bottomP{font-size: 14px;}
+		.flickity-prev-next-button .flickity-button-icon{width: 40%; top: 35%;}
+		.flickity-prev-next-button.next{right: 0px;}
+		.flickity-prev-next-button.previous{left: 0px;}
+		.flickity-button{background: transparent;}
+	</style>
+	</head>
+	<body style="background: lightblue;">
+		
+		<div class="container">
+
+			<div class="main-carousel js-flickity" data-flickity='{ "autoPlay": true }'>
+  				<div class="carousel-cell">
+  					<div class="TOPtextCol">
+  						<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/5660f879310a460dbcc10d2ceb60ad52_1.png" alt="" class="imgStars">
+						<p class="name"><b>Sandy  |  Massillon, OH</b> <br>12/31/2021</p>
+						<p><b>Great set</b><br><span class="bottomP">This knife set is perfect, very sharp, cut perfectly, nice wood block to store all in. I love this set and will never use anything else.</span></p>
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="TOPtextCol">
+  						<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/5660f879310a460dbcc10d2ceb60ad52_1.png" alt="" class="imgStars">
+						<p class="name"><b>Jelly  |  Hayden, ID</b> <br>12/31/2021</p>
+						<p><b>Great set of knives</b><br><span class="bottomP">I have had these knives for 18 years and they were in storage most of that time, only in the last 2 years that I have been able to use them.  They worked just as good as the day I got them 18 years ago.  I use them every day now and love them.  I subsequently have ordered 3 more sets for friends, and they will love them too!</span></p>
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="TOPtextCol">
+  						<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/5660f879310a460dbcc10d2ceb60ad52_1.png" alt="" class="imgStars">
+						<p class="name"><b>Tanya  |  Richmond, VA</b> <br>10/31/2021</p>
+						<p><b>Love</b><br><span class="bottomP">I ordered this for a gift. I still have my original miracle blade from over 20 years ago. They are awesome! The only knives I will ever use. Going to order myself another set! I really like the new knives added to the set! The cheese knife is awesome!!!</span></p>
+					</div>
+  				</div>
+  				<div class="carousel-cell">
+  					<div class="TOPtextCol">
+  						<img src="https://mojonow.blob.core.windows.net/cmr/t14922/src/5660f879310a460dbcc10d2ceb60ad52_1.png" alt="" class="imgStars">
+						<p class="name"><b>Ann  |  Mineral, TX</b> <br>10/31/2021</p>
+						<p><b>Blades are so sharp</b><br><span class="bottomP">It's unbelievable that such  high quality is made available at a low cost, plus the ability to receive another set for my daughter-in-law at no extra cost.x</span></p>
+					</div>
+  				</div>
+  				
+			</div>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+
+				$('.main-carousel').flickity({
+  					cellAlign: 'center',
+  					freeScroll: true,
+  					autoPlay: 5000
+
+  				});
+			});
+		</script>
+
+
+	</body>
+	</html>

@@ -1,0 +1,30 @@
+	<style>
+
+     </style>
+   
+
+   <script>
+   	$(document).ready(function() {
+  var sendingDisabled = false;
+  var $cb = $('#offer-details-checkbox');
+  $cb.on('change', function() {
+     var $button = $('.js-order-button');
+     if ($cb.is(':checked')) {
+         $button.removeClass('btn-disabled');
+         sendingDisabled = false;
+     } else {
+        $button.addClass('btn-disabled');
+        sendingDisabled = true;
+     }
+  });
+});
+   </script>
+
+
+   <script>
+   	 $(document).ready(function() {
+  		
+   	 	$(".custom-content").css("font-size", "16px");
+
+     });
+   </script>

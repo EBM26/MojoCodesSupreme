@@ -1,42 +1,13 @@
 var currentItems = [];
 var currentItem = {
   id: 0,
-  type: '',
   size: '',
   quantity: 1
 };
-var basePrice = 19.95;
-var additionalPrice = 19.95;
+
 $('.hidden-block').hide();
 addNewItem();
 
-$('button[data-type="women"]').click(function() {
-  if (!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    $('button[data-type="men"]').removeClass('active');
-    $('div[data-gender="women"]').show();
-    $('div[data-gender="men"]').hide();
-    if (currentItem.type === 'Men') {
-      currentItem.size = '';
-    }
-    currentItem.type = 'Women';
-    toggleAddToCart();
-  }
-});
-
-$('button[data-type="men"]').click(function() {
-  if (!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    $('button[data-type="women"]').removeClass('active');
-    $('div[data-gender="men"]').show();
-    $('div[data-gender="women"]').hide();
-    if (currentItem.type === 'Women') {
-      currentItem.size = '';
-    }
-    currentItem.type = 'Men';
-    toggleAddToCart();
-  }
-});
 
 $('button[data-size]').click(function() {
   $('button[data-size]').removeClass('active');
@@ -60,18 +31,7 @@ $('#selectQ').change(function() {
 });
 
 $('body').on('change', '.selectQBottom', function() {
-  var id = $(this).closest('[data-id]').attr('data-id');
-  var val = Number($(this).val());
-  var priceEl = $(this).closest('.grid__cell').find('.item-price');
-  currentItems.forEach(function(el, i) {
-    if (el.id === Number(id)) {
-      el.quantity = val;
-      var price = i === 0 ?
-        `$${(19.95 * el.quantity).toFixed(2)} + S&P $9.95` :
-        `$${(19.95 * el.quantity).toFixed(2)} + S&P $9.95`;
-      priceEl.text(price);
-    }
-  });
+
 
   reRenderQDropDown();
   renderDropDowns();
@@ -91,7 +51,7 @@ $('body').on('click', '.item-remove', function() {
 
 function toggleAddToCart() {
   var addToCartBtn = $('.add-btn a');
-  if (currentItem.type !== '' && currentItem.size !== '') {
+  if (currentItem.size !== '') {
     addToCartBtn.addClass('active');
   }
   else {
@@ -103,11 +63,7 @@ function addNewItem(currentItem) {
   var quantity = getCurrentQuantity();
   var cartWr = $('.cart-wr > div');
   if (currentItem) {
-    var isFirstPair = currentItems.length === 1;
-    var price = isFirstPair ?
-      `$${(19.95 * currentItem.quantity).toFixed(2)} + S&P $9.95` :
-      `$${(19.95 * currentItem.quantity).toFixed(2)} + S&P $9.95`;
-    cartWr.append('<div class="grid__row item-box" data-id="' + currentItem.id + '"><div class="grid__column area--12"><div class="grid__cell"><div class="grid__row grid__row--forever"> <div class="grid__column area--7"> <div class="grid__cell"> <div> <div class="widget-text item-price">' + price + '</div></div>    <div>    <div class="widget-text item-size">Size: ' + currentItem.type + '’s ' + `${currentItem.size - 1.5} - ${currentItem.size}` + '</div>    </div>    <div>    <div class="widget-text item-quantity">Quantity:</div> <select id="' + currentItem.id + '" class="selectQBottom"></select> </div> </div> </div> <div class="grid__column area--5"> <div class="grid__cell"> <div class="widget-text item-remove" data-remove="' + currentItem.id + '">Remove <i class="fas fa-times"    style="margin-left: 5px; vertical-align: middle;"></i> </div> </div> </div> </div> </div> </div> </div>');
+    cartWr.append('<div class="grid__row item-box" data-id="' + currentItem.id + '"><div class="grid__column area--12"><div class="grid__cell"><div class="grid__row grid__row--forever"> <div class="grid__column area--7"> <div class="grid__cell"> <div> <div class="widget-text item-price">$0.00 + $10.95 S&P</div></div>    <div>    <div class="widget-text item-size">Size: ' + currentItem.size + '</div>    </div>    <div>    <div class="widget-text item-quantity">Quantity:</div> <select id="' + currentItem.id + '" class="selectQBottom"></select> </div> </div> </div> <div class="grid__column area--5"> <div class="grid__cell"> <div class="widget-text item-remove" data-remove="' + currentItem.id + '">Remove <i class="fas fa-times"    style="margin-left: 5px; vertical-align: middle;"></i> </div> </div> </div> </div> </div> </div> </div>');
     var options = '';
     for (var i = 1; i <= currentItem.quantity; i++) {
       options += '<option value="' + i + '">' + i + '</option>';
@@ -180,19 +136,22 @@ function renderAddToCart() {
 }
 
 if (typeof window.mojoApp !== 'undefined') {
-  window.mojoApp._hooks.add('offer_selection_send_offers', function(value, options) {
-      Object.keys(value.offers).forEach(function(index) {
-        value.offers[index] = 0;
-      });
-      currentItems.forEach(function(el, i) {
-        var offer = getOfferId(el);
-        value.offers[offer.offerId] = el.quantity;
-      });
+  window.mojoApp._hooks.add('upsell_form_send_offers_filter', function(value, options) {
       function getOfferId(current) {
         return ___pageOffers.filter(function(el) {
-          return el.name.indexOf('-' + current.size) > -1 && el.name.indexOf(current.type) > -1;
+          return el.name.toLowerCase().indexOf(current.size) > -1;
         })[0];
       }
+
+      for (var o in options) {
+        options[o] = 0;
+      }
+
+      currentItems.forEach(function(el) {
+        var offer = getOfferId(el);
+        options[offer.offerId] += el.quantity;
+      });
+      return options;
     }
   );
 }

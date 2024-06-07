@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
-  $("a.widget-nav__link:eq(1)").click(function(e) {
+  $(".amazonStars").click(function(e) {
     e.preventDefault();
     	$('html, body').animate({
-            scrollTop: $(".reviewsSection").offset().top
+            scrollTop: $("#testimonialsDiv").offset().top
           }, 1000);
     });
     

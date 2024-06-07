@@ -1,0 +1,135 @@
+<style>
+    .select-button {
+        padding: 10px;
+        margin: 10px 5px 5px;
+        display: block;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        vertical-align: middle;
+        width: 95%;
+        border-radius: 30px;
+        background-color: #fff;
+        font-size: 20px;
+        font-family: 'League Spartan', sans-serif;
+        line-height: inherit;
+        font-style: inherit;
+        color: #242f35;
+        text-transform: inherit;
+        border: 1px solid #A0A0A0;
+    }
+
+    .select-button:hover {
+        background: #ECAB2F;
+        color: #fff;
+    }
+
+    .select-button.active {
+        background: #ECAB2F;
+        color: #fff;
+    }
+
+    .widget-text-cs {
+        margin: 20px 0 5px 15px;
+        font-size: 25px;
+        font-family: 'League Spartan', sans-serif;
+        line-height: inherit;
+    }
+
+    .add-btn a {
+        cursor: default;
+        color: #FFF!important;
+    }
+
+    .add-btn a.active {
+        cursor: pointer;
+    }
+
+    .selectQBottom {
+        font-size: 22px;
+        border: 3px solid #9CADB5;
+        background: #fff;
+        width: 80px;
+        height: 40px;
+        margin: 7px auto;
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: 1060px) {
+        .selectQBottom {
+            font-size: 22px;
+            width: 50px;
+            height: 35px;
+        }
+    }
+
+    .item-box {
+        border: 1px solid #dee4e6;
+        padding: 10px;
+    }
+
+    .item-box .widget-text {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .item-box .item-price {
+        font-size: 22px;
+        font-weight: 500;
+        margin: 10px 0;
+    }
+
+    .item-box .item-quantity {
+        float: left;
+        padding: 3px 10px 0 0;
+    }
+
+    .item-box .item-remove {
+        text-align: end;
+        font-weight: 500;
+        color: #0066b1;
+        cursor: pointer;
+    }
+
+</style>
+<div class="widget-text-cs">Size</div>
+<div class="grid" data-gender="women">
+    <div class="grid__row">
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="small" class="select-button">Small</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="medium" class="select-button">Medium</button>
+            </div>
+        </div>
+        <div class="grid__column area--4">
+            <div class="grid__cell">
+                <button data-size="large" class="select-button">Large</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    #selectQ{font-size: 24px; border: 1px solid #A0A0A0; 
+    background: #ffffff; width: 110px; border-radius: 30px;
+              height: 60px; margin: 7px auto; text-align: center;}
+    @media only screen and (max-width: 1060px) {
+            #selectQ{font-size: 20px; width: 70px;height: 55px;}
+            }
+</style>
+<select id="selectQ">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+
+
+ 

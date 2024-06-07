@@ -1,0 +1,87 @@
+<style>
+  .btn-disabled .button{background: gray !important; cursor: none;}
+
+  .radio-wr{
+  margin:10px 0px;
+  cursor: pointer;
+ }
+ input[type='checkbox'] {
+  display: none;
+}
+
+label:before {
+  /*styles outer circle*/
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 3px;
+  margin: 0 10px 0 0;
+  width: 28px;
+  height: 28px;
+  border: 2px solid #276FBF;
+  background-color: transparent;
+  float: left;
+  margin-bottom: 30px;
+}
+
+label {
+  position: relative; 
+  color: #3A506B; 
+  overflow: visible; 
+  font-weight: bold;
+  line-height: 30px;
+}
+
+label input[type='checkbox']:checked+span {
+  /*styles inside circle*/
+  width: 20px;
+  height: 16px;
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  display: block;
+  background: url(https://mojonow.blob.core.windows.net/cmr/t5010/src/835153c59c894e08ad8dc6834eac3ed2_1.svg) no-repeat;
+  background-size: contain;
+}
+.smallAuto {
+font-size: 18px;
+}
+</style>
+
+
+<div class="radio-wr">
+<label class="labelMadel">
+  <input value="71157" type="checkbox" name="offer-checkboxUltra" id="offer-details-checkbox" class="offerCheck" data-group="1"><span></span>Click here to accept the terms and conditions of this offer and our <a href="https://walkfitplatinum.com/Privacy-Policy">privacy policy</a>.
+
+</label>
+</div>
+<div style="clear: both;"></div>
+
+
+
+
+<script>
+  $(document).ready(function() {
+  var sendingDisabled = false;
+  var $cb = $('#offer-details-checkbox');
+  $cb.on('change', function() {
+     var $button = $('.js-order-button');
+     if ($cb.is(':checked')) {
+         $button.removeClass('btn-disabled');
+         sendingDisabled = false;
+     } else {
+        $button.addClass('btn-disabled');
+        sendingDisabled = true;
+     }
+  });
+  
+  mojoApp.hooks.add('upsell_form_send_offers_filter', function(f, o) {
+    if (sendingDisabled) {
+      return {}; 
+    } 
+    return o;
+  });
+  
+  $cb.change();
+});
+</script>

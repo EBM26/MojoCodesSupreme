@@ -1,0 +1,75 @@
+
+	<style>
+	.faq-div{border-top: 1px solid #FFFFFF; font-family: 'Open Sans', sans-serif;
+			 color: #FFFFFF; margin-top: 30px; padding-top: 10px;}
+	.question-div{font-size: 24px; font-family: 'Alegreya', serif;} 
+	.question-div p{margin: 0; padding: 0px;}
+	.text-box{padding-left: 20px; font-size: 16px; display: none;}
+	.plusSign{width: 30px; float: right; margin-top: 5px;}
+    .activeGold{color: #FDBA13;}
+</style>
+
+		 
+		 <div class="faq-div">
+		 	<div class="question-div">
+		 		<p>12 Organic Super Sprouts <img src="https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png" alt=""  class="plusSign"></p>
+		 	</div>
+		 	<div class="text-box">
+		 		<p>Amaranth, Quinoa, Millet, Buckwheat, Garbanzo beans, Lentil, Adzuki, Flax, Sunflower, Pumpkin, Chia, Sesame</p>
+		 	</div>
+		 </div>
+		 <div class="faq-div">
+		 	<div class="question-div">
+		 		<p>8 Organic Super Fruits <img src="https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png" alt=""  class="plusSign"></p>
+		 	</div>
+		 	<div class="text-box">
+		 		<p>Blueberry, Strawberry, Cranberry, Orange, Cherry, Lemon, Pear, Apple</p>
+		 	</div>
+		 </div>
+		  <div class="faq-div">
+		 	<div class="question-div">
+		 		<p>6 Organic Super Vegetables <img src="https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png" alt=""  class="plusSign"></p>
+		 	</div>
+		 	<div class="text-box">
+		 		<p>Broccoli, Celery, Brussel Sprouts, Carrot, Green Bell Pepper, Pumpkin</p>
+		 	</div>
+		 </div>
+		  <div class="faq-div">
+		 	<div class="question-div">
+		 		<p>5 Organic Super Greens <img src="https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png" alt=""  class="plusSign"></p>
+		 	</div>
+		 	<div class="text-box">
+		 		<p>Kale, Spinach, Wheatgrass, Barley Grass, Alfalfa Grass</p>
+		 	</div>
+		 </div>
+		
+
+	
+	<script>
+
+	$(document).ready(function() {
+
+	$(".question-div").click(function(){
+
+		if(!$(this).hasClass("activeGold")) {
+			$(".question-div").removeClass("activeGold");
+			$(".text-box").slideUp();
+			$(".plusSign").attr("src", "https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png");
+			$(this).addClass("activeGold");
+			$(this).next(".text-box").slideDown();
+			$(this).find(".plusSign").attr("src", "https://mojonow.blob.core.windows.net/cmr/t14710/src/b5e68f168894416ba57871d3591c77b2_1.png");
+			}
+
+		    else if($(this).hasClass("activeGold")) {
+				$(this).removeClass("activeGold");
+				$(".text-box").slideUp();
+				$(".plusSign").attr("src", "https://mojonow.blob.core.windows.net/cmr/t14710/src/b0ec7b3eaa13451c893d8ad4351eb574_1.png");
+			  }
+			})
+
+	});
+
+
+	</script>
+
+

@@ -1,0 +1,76 @@
+<style>
+  
+    .topBan{background: #0B9EBF; padding: 0 10px; display: flex; align-items: center; justify-content: center; color: #fff;}
+    .topBan p{font-size: 20px;}
+    .learnButt{background: #F49A2E; margin-left: 15px; padding: 8px 15px; border-radius: 50px;}
+    .learnButt:hover{opacity: .5;}
+    .learnButt a:hover{text-decoration: none;}
+
+
+
+</style>
+
+
+<section class="section hero">
+  <div class="topBan">
+    <p>Important Update: New AquaTru Connect App Available</p> <div class="learnButt"><a href="https://support.aquatruwater.com/hc/en-us/articles/21517703038103-How-Sync-To-My-New-AquaTru-Connect-App">LEARN MORE</a></div>
+  </div>
+  <div class="hero-inner">
+    <h1 class="heroH1">HELP CENTER</h1>
+    <p id="searchP">Search our knowledge database for answers to common questions</p>
+    {{search submit=false instant=settings.instant_search class='search search-full'}}
+  </div>
+</section>
+
+<div class="container">
+  <section class="section knowledge-base">
+     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
+    <section class="categories blocks">
+      <ul class="blocks-list">
+        {{#each categories}}
+            <li class="blocks-item">
+            <a href='{{url}}' class="blocks-item-link">
+            {{#is name 'Products'}}
+            <img src="{{asset 'dropIconNew.png'}}" />
+            {{/is}}
+            {{#is name 'Videos'}}
+            <img src="{{asset 'vidIconNew.png'}}" />
+            {{/is}}
+            {{#is name 'Shipping & Billing'}}
+            <img src="{{asset 'shipIconNew.png'}}" />
+            {{/is}}
+            {{#is name 'Warranty'}}
+            <img src="{{asset 'chatIconNew.png'}}" />
+            {{/is}}
+            {{#is name 'Troubleshooting'}}
+            <img src="{{asset 'fixIconNew.png'}}" />
+            {{/is}}
+            {{#is name 'Technology'}}
+            <img src="{{asset 'houseIconNew.png'}}" class="iconTech"/>
+            {{/is}}
+            <h4 class="blocks-item-title">{{name}}</h4>
+            </a>
+            </li>
+        {{/each}}
+      </ul>
+    </section>
+
+  </section>
+
+</div>
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+

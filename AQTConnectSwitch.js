@@ -1,19 +1,17 @@
 $(document).ready(function() {
 
 
-	 $("#AQTConnect").click(function() {
-			$(".tpp").html("$166.33");  
-			$(".app").html("$44");  
-			$(".connectDetails, .easierSection").show();  
+	 $("#AQTConnect").click(function() { 
+			$(".connectDetails, .easierSection, .connectPaymentRow").show();  
 			$(".checkCol1").addClass("greyBack");
 			$(".checkCol2").removeClass("greyBack");
-			$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/b541b58451564151af514a05d389ff45_1.png");  
-			$(".smallPic1 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/04b10924c33f4e7983eadbe407529323_1.png");  
-			$(".smallPic4 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/377a03a97bb54e3eb3bac2e70f416693_1.png");  
+			$(".classicPaymentRow").hide();
+			$(".smallPic1 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t15021/src/5a619593ae7144d39350c8329c91ae4d_1.jpg");  
+			$(".smallPic4 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t13738/src/0f4331b172984c7a8b65f1c3db3e0a03_1.jpg");  
 			$(".smallPic1").click(function() {
  		    $(".videoCustom").hide();
   		    $(".bigPic").show();
-         	$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/b541b58451564151af514a05d389ff45_1.png");
+         	$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t15021/src/5a619593ae7144d39350c8329c91ae4d_1.jpg");
 			 });
 			$(".smallPic2").click(function() {
  		        $(".videoCustom").hide();
@@ -33,17 +31,15 @@ $(document).ready(function() {
 
 		 $("#AQTClassic").click(function() {
  		    $(".videoCustom").hide();
-  		    $(".bigPic").show();
-		 	$(".tpp").html("$149.66");  
-			$(".app").html("$40"); 
-			$(".connectDetails, .easierSection").hide();
+  		    $(".bigPic, .classicPaymentRow").show();
+			$(".connectDetails, .easierSection, .connectPaymentRow").hide();
 			$(".checkCol2").addClass("greyBack");
 			$(".checkCol1").removeClass("greyBack");  
-			$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/dd96a246d5964106b815b5d4e9dcbc26_1.png");  
-			$(".smallPic1 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/dd96a246d5964106b815b5d4e9dcbc26_1.png");  
+			$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t15021/src/d025ed46dbf54329b03d3ebf124ed00a_1.jpg");  
+			$(".smallPic1 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t15021/src/d025ed46dbf54329b03d3ebf124ed00a_1.jpg");  
 			$(".smallPic4 img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/61d9b133b088444ba8253f82639416f7_1.jpg");  
 			$(".smallPic1").click(function() {
-         		$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/dd96a246d5964106b815b5d4e9dcbc26_1.png");
+         		$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t15021/src/d025ed46dbf54329b03d3ebf124ed00a_1.jpg");
 			 });
 			$(".smallPic2").click(function() {
          		$(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9383/src/e7e403b49c5848419cb56f4b719e7a4c_1.png");

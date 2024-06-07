@@ -1,0 +1,44 @@
+ <style>
+    .threePaySelect{display: none;}
+    .switchPay{color: #000; 
+     padding: 6px 0;
+     text-align: center;
+     border: 2px solid #D3E9FF;
+     max-width: 180px;
+     margin: 10px auto;
+     border-radius: 70px;
+     cursor: pointer;}
+      .switchPay:hover, .activePay{color: #FFF; background: #D3E9FF; font-weight: bold;}
+
+ </style>
+ <div class="switchPay threePay">Three Payments</div>
+
+
+
+ <script>
+ 	
+
+
+$(document).ready(function() {
+   $(".panelRow").hide();
+
+   $(".onePay").click(function() {
+    $(".threePay").removeClass("activePay");
+    $(".panelRow, .threePaySelect").hide();
+    $(".onePaySelect").show();
+      
+   });
+
+    $(".threePay").click(function() {
+      $(".onePay").removeClass("activePay");
+      $(".onePaySelect").hide();
+      $(".panelRow, .threePaySelect").show();
+   });
+
+});
+
+
+
+
+
+ </script>

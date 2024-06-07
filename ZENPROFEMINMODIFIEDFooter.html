@@ -1,0 +1,70 @@
+<style>
+  .footer{background: #400243; padding: 30px 15px; width: 100%;}
+  a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+ .footCol{display: inline-block; float: left; width: 20%;}
+ .footColBig{width: 60%; padding-top: 15px; display: flex; justify-content: center;}
+.colWrapper:after{clear: both;}
+.colWrapper{width: 100%; max-width: 1100px; margin: auto;}
+.footLinks{display: inline-block; color: #FFFFFF !important; font-size: 14px; margin: 10px 5px;
+           text-align: center; font-weight: bold;}
+.clear{clear: both;}
+.bottomFooter{padding-top: 20px; text-align: center;}
+.botFoot{font-size: 14px; color: #FFFFFF !important; display: inline-block; margin: 0; 
+          font-weight: bold;}
+.centerDiv{text-align: center;}
+.separ{margin: 0 5px; font-size: 20px; font-weight: normal;}
+
+@media (max-width: 1023px) {
+   .footer-inner{display: block;}
+   .footCol, .footColBig{display: block; float: none; width: 100%; margin: auto;
+                        text-align: center;}
+}
+
+@media (max-width: 767px) {
+  .footLinks{display: block;}
+
+}
+
+
+</style>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="colWrapper">
+      <div class="footCol">
+        <a href="https://profemin.com/" class="footLinks">
+          <img src="{{asset 'logo.png'}}"  class="logoImg"/>
+        </a>
+      </div>
+      <div class="footCol footColBig">
+        <a href="https://profemin.com/PrivacyPolicy" class="footLinks">Privacy Policy</a>
+        <a href="https://profemin.com/ReturnPolicy" class="footLinks">Return Policy</a>
+        <a href="https://profemin.com/TermsConditions" class="footLinks">Terms & Conditions</a>
+      </div>
+      <div class="clear"></div>
+      <div class="bottomFooter">
+        <p class="botFoot">Copyright © <span class="ytd">2021</span> TheraBotanics Supplements, LLC - All rights reserved.</p> 
+      </div>
+    </div>
+
+    <div class="footer-language-selector centerDiv">
+      {{#if alternative_locales}}
+        <div class="dropdown language-selector">
+          <button class="dropdown-toggle" aria-haspopup="true">
+            {{current_locale.name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </button>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+</footer>

@@ -1,8 +1,13 @@
+<a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+
 <header class="header">
   <div class="logo">
-      <a href="https://www.prosvent.com/">
-        <img src="{{asset 'MainLogo.png'}}" />
-      </a>
+    {{#link 'help_center'}}
+      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}" />
+      {{#if settings.show_brand_name}}
+        <span aria-hidden="true">{{help_center.name}}</span>
+      {{/if}}
+    {{/link}}
   </div>
   <div class="nav-wrapper">
     <button class="menu-button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">

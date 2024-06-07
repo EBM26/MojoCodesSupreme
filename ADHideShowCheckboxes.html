@@ -1,0 +1,82 @@
+ <style>
+   #boxesWrapper{display: flex; font-family: 'Open Sans', sans-serif;}
+   .boxDiv{flex: 1; text-align: center;}
+   .boxDiv img{max-width: 240px; margin: 20px auto;}
+   .boxDiv p{margin: 0; font-weight: bold;}
+   .checkies, .boxDiv label{cursor: pointer;}
+   .boxDiv label{color: #808285; font-weight: bold; cursor: pointer;}
+   .viewAllBox{text-align: center; margin: 40px 0;}
+
+
+    @media screen and (max-width: 1023px) {
+          .boxDiv img{max-width: 170px; margin: 20px auto;}
+          .viewAllBox{margin: 30px 0;}
+          .boxDiv p{font-size: 12px;}
+    }
+   
+    @media screen and (max-width: 767px) {
+          #boxesWrapper{text-align:center; display: block;}
+         .checkies, .boxDiv label{font-size: 12px; vertical-align: middle;}
+         .boxDiv{width: 45%; display: inline-block; margin-bottom: 30px;}
+         .viewAllBox{margin-top: 30px;}
+    }
+</style>
+<div id="boxesWrapper">
+   <div class="boxDiv">
+       <input type="checkbox" id="AD1000" value="section1000" class="checkies">
+        <label for="AD1000">AD 1000</label><br>
+        <img src="https://az686452.vo.msecnd.net/cmr/t10919/src/2c4ae02b4be349edb6fc4c5f317dd081_1.jpg" alt="" class="unitImg">
+        <p>9" Width, 23" Height</p>
+   </div>
+   <div class="boxDiv">
+       <input type="checkbox" id="AD2000" value="section2000" class="checkies">
+        <label for="AD2000">AD 2000</label><br>
+        <img src="https://az686452.vo.msecnd.net/cmr/t15452/opt/6ffcc0d486ee45038609f45716187bdb_1.jpg" alt="" class="unitImg">
+        <p>13.8" Width, 18.7" Height</p>
+   </div>
+   <div class="boxDiv">
+       <input type="checkbox" id="AD3000" value="section3000" class="checkies">
+        <label for="AD3000">AD 3000</label><br>
+        <img src="https://az686452.vo.msecnd.net/cmr/t10919/opt/ff6881d4b4a84c8da04e138c6af970b5_1.jpg" alt="" class="unitImg">
+        <p>15.7" Width, 23" Height</p>
+   </div>
+   <div class="boxDiv">
+       <input type="checkbox" id="AD5000" value="section5000" class="checkies">
+        <label for="AD5000">AD 5000</label><br>
+        <img src="https://az686452.vo.msecnd.net/cmr/t11288/src/1b0821b5e7db4c99a46c9dd33c794af0_1.jpg" alt="" class="unitImg">
+        <p>16" Width, 28.7" Height</p>
+   </div>
+</div>
+    <div class="viewAllBox">
+       <input type="checkbox" id="viewAll" class="checkies" checked>
+        <label for="viewAll">View All</label><br>
+   </div>
+
+
+
+
+
+<script type="text/javascript">
+ $(document).ready(function() {
+
+   $(".checkies").click(function() { 
+          $('.checkies').prop('checked', false);
+          $(".filterSec").hide();
+          $(this).prop('checked', true);
+          var checkVal = $(this).val();
+          var Val2Class = "." + checkVal.toString();
+          $(Val2Class).show();
+
+   });
+
+    $("#viewAll").click(function() { 
+          $('.checkies').prop('checked', false);
+          $(".filterSec").show();
+          $(this).prop('checked', true);
+
+   });
+
+});
+
+</script>
+

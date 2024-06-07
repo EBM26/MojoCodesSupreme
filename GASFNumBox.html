@@ -1,0 +1,103 @@
+<style>
+   .greenBox{background: #DBF4ED; max-width: 120px; border-radius: 30px; display: flex; align-items: center; justify-content: center; padding: 2px 10px; margin: 15px 0 10px 60px;}
+   .numBox{font-weight: bold; margin: 0 20px;}
+   .addBox{background: #ffffff; border-radius: 50%; color:#40AC93; width: 25px; height: 25px; display: flex; align-items: center; justify-content: center; cursor: pointer;}
+</style>
+<div class="greenBox">
+  <div class="addBox minusBox" id="minusBox">-</div>
+  <div class="numBox" id="numBox">1</div>
+  <div class="addBox plusBox" id="plusBox">+</div>
+</div>
+
+<p id="addBag">Add A Bag For FREE Shipping</p>
+<p class="total">$69.95</p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  
+  // var currentValue = document.getElementById("numBox").innerHTML;
+  // var currentNumber = new Number(currentValue);
+  // var numBox = document.getElementById("numBox");
+  // var minusBox = document.getElementById("minusBox");
+  // var plusBox = document.getElementById("plusBox");
+
+  // function addNum() {
+  //   if (currentNumber == 5) {
+  //     return;
+  //   }
+
+  //   else {
+  //     numBox.innerHTML = currentNumber += 1;
+  //   }
+  // }
+
+  // plusBox.addEventListener("click", addNum);
+
+  // function subtractNum() {
+  // if (currentNumber == 1) {
+  //     return;
+  //   }
+
+  //   else {
+  //     numBox.innerHTML = currentNumber -= 1;
+  //   }
+  // }
+
+  // minusBox.addEventListener("click", subtractNum);
+
+  $(document).ready(function() {
+    var currentValue = $(".numBox").html();
+    var currentNumber = new Number(currentValue);
+
+    $(".minusBox").click(function() {
+        
+        if (currentNumber == 1) {
+          return;
+        }
+
+        else {
+          $(".numBox").html(currentNumber -= 1);
+           if (currentNumber == 1) {
+           $("#addBag").html("Add A Bag For FREE Shipping").removeClass("greenText");
+           }
+        }
+
+    });
+
+     $(".plusBox").click(function() {
+         if (currentNumber == 3) {
+          return;
+      }
+
+      else {
+          $(".numBox").html(currentNumber += 1);
+          $("#addBag").html("You Get Free Shipping!").addClass("greenText");
+
+      }
+    });
+
+
+
+});
+
+</script>
+  
+ 
+<script>
+      $(document).ready(function() {
+        $(".widget-radio__field").click(function() {
+            if ($(this).attr('value') == "one-time") {
+              $(".subBox").addClass("divOff").removeClass("divOn");
+              $(".oneBox").addClass("divOn").removeClass("divOff");
+              $(".saving").hide();
+            }
+
+            if ($(this).attr('value') == "subscribe") {
+              $(".oneBox").addClass("divOff").removeClass("divOn");
+              $(".subBox").addClass("divOn").removeClass("divOff");
+              $(".saving").show();
+            }
+        })
+
+      });
+</script>

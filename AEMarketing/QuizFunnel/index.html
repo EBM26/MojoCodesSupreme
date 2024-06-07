@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>DevOps Money Saving Quiz</title>
+	<style>
+
+		*{text-decoration: none; max-width: 100%; margin: 0; padding: 0; box-sizing: border-box;}
+html,body{margin: 0; padding: 0; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #000;}
+img{border: none;}
+li{list-style-type: none;}
+div{display: block; margin: 0; padding: 0;}
+u{text-decoration: underline;}
+s{text-decoration: line-through;}
+i{font-style: italic;}
+b{font-weight: bold;}
+a:link, a:visited, a:active{text-decoration: none; color: inherit;}
+.Fright{float: right; display: table;}
+.Fleft{float: left; display: table;}
+.clear{clear: both;}
+.container{width: 960px; margin: auto; background: #fff; padding: 20px;}
+.margin25{margin: 25px 0;}
+.margin20{margin: 20px 0;}
+.margin30{margin: 30px auto;}
+.marright5{margin-right: 5px;}
+.marleft25{margin-left: 25px;}
+.martop10{margin-top: 10px;}
+.martop25{margin-top: 25px;}
+.martop20{margin-top: 20px;}
+.martop55{margin-top: 55px !important;}
+.marbot5{margin-bottom: 5px;}
+.marbot25{margin-bottom: 25px;}
+.marbot10{margin-bottom: 10px;}
+.marbot40{margin-bottom: 40px;}
+.marg1055{margin: 10px 0 55px;}
+.marbot100{margin-bottom: 100px;}
+.negmarbot30{margin-bottom: -30px;}
+.align-left{text-align: left;}
+.font12{font-size: 12px;}
+.font45{font-size: 45px;}
+.font25{font-size: 25px;}
+.font15{font-size: 15px;}
+.font21{font-size: 21px;}
+.font65{font-size: 65px;}
+.inline{display: inline;}
+.inline-block{display: inline-block;}
+.uppercase{text-transform: uppercase;}
+.center{text-align: center;}
+.site-color{color:  #6d6e71;}
+.relative{position: relative;}
+.hidden{display: none;}
+.padmobile{padding: 0 15px;}
+.white{color: #fff;}
+
+		body{ background: url("img/do5.jpeg");}
+		.site-color{color: #3a5eac;}
+		.logoIMG{max-width: 200px;}
+		header{margin-top: 30px;}
+
+		.aging-back{width: 100%; padding-bottom: 60px; max-width: 960px; margin: auto; 
+					background: #fff;}
+		.fast{font-size: 40px;}
+		hr{border: 0; border-top: 2px solid; width: 450px; margin: 30px auto;}
+		.progress-bar{background: #e6e6e6; width: 100%; height: 35px; border-radius: 25px; margin: 25px auto;}
+		.inside-progress{background: #0EA24B; width: 25%; height: 100%; border-radius: 25px;}
+		.question-div{font-size: 22px; margin-left: 80px; display: none;}
+		.ques-num{font-size: 24px;}
+		.input{position: absolute; z-index: 100; opacity: 0; cursor: pointer; width: 30px; height: 30px;
+			   top: -3px; right: -2px;}
+		.checkbox{border: 1px solid #b7b7b7; border-radius: 5px; background-color: #fff; width: 23px; height: 23px; 
+    			  vertical-align: -4px; margin-right: 5px; margin-left: 20px; position: relative; cursor: pointer; 
+    			  display: inline-block;}
+    	.active{display: block;}
+    	.CTA{background: #ff8124; color: #fff; font-size: 27px; font-weight: bold; text-align: center; width: 230px; 
+    		  margin: 30px auto; padding: 6px 0 4px; cursor: pointer; display: none;}
+    	.CTA:hover{opacity: .6;}
+    	.padbot40{padding-bottom: 40px;}
+    	.orange-check{position: absolute; max-width: 130%; top: -4px; display: none;}
+    	.special-font{width: 700px; margin: auto;}
+    	.rightQ{margin-left: 30px;}
+    	.rightQ p, .leftQ p{margin-bottom: 30px;}
+    	.answerWrapper{display: flex;}
+    	.overlayResults{width: 100%; height: 100%; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color:rgba(0, 0, 0, 0.8);
+		 -webkit-animation: fadein .5s; animation: fadein .5s; z-index: 2000000; overflow: scroll;
+		 display: flex; align-items: center; justify-content: center;}
+		 .overlayResults .container{max-width: 500px; padding: 30px;}
+		 .formField{margin-top: 20px; text-align: center;}
+		 .inputField{width: 50%;padding: 5px;margin-bottom: 10px;border-radius: 3px; 
+		 			 border: 1px solid #ccc;}
+		 .inputField:focus{ outline: none; }
+		 .submitButton{width: 50%; padding: 10px; color: #fff; font-weight: bold; background: #FF9900;
+		 			   border: 0; border-radius: 3px; cursor: pointer; text-transform: uppercase;}
+
+    	@media only screen and (max-width: 767px) {
+		   header{margin-top: 0;}
+		   .question-div{margin-left: 20px;}
+		   .answerWrapper{display: block;}
+		   .rightQ{margin-left: 0px;}
+		   .rightQ p, .leftQ p{margin-bottom: 20px;}
+		   .fast{font-size: 30px;}
+		   .container{width: auto; padding: 10px 20px;}
+		}
+	</style>
+	</head>
+	<body>
+		<header>
+			<div class="container center">
+				<img src="img/aeLogo.png" class="logoIMG"  alt="Automate Everything Logo">
+			</div>
+		</header>
+		<div class="container relative">
+			<div class="center special-font">
+				<p class="fast">How much money<br><b>can your company save on Devops?</b></p>
+				<hr>
+				<p class="font25">Looking to save money on your DevOps/SRE costs? Take this 1-minute quiz for a <b>FREE CONSULTATION</b></p>
+			</div>
+		</div>
+		</div>
+		<div class="container padbot40 question-container">
+			<div class="progress-bar"> <div class="inside-progress"></div> </div>
+			<div class="question-div active" id="question1">
+				<p class="ques-num">1 of 4</p>
+				<p class="marbot25 martop10"><b>How large is your company?</b></p>
+				<div class="answerWrapper">
+					<div class="leftQ">
+						<div class="checkbox"><input type="radio" name="gender" class="input" value="male"></div> <p class="inline-block marbot10">1 - 10 people</p><br>
+						<div class="checkbox"><input type="radio" name="gender" class="input" value="female"></div> <p class="inline-block marbot10">11 - 50 people</p>
+					</div>
+					<div class="rightQ">
+						<div class="checkbox"><input type="radio" name="gender" class="input" value="female"></div> <p class="inline-block marbot10">51 - 200 people</p><br>
+						<div class="checkbox"><input type="radio" name="gender" class="input" value="female"></div> <p class="inline-block marbot10">above 200 people</p>
+					</div>
+				</div>
+			</div>
+			<div class="question-div" id="question2">
+				<p class="ques-num">2 of 4</p>
+				<p class="marbot25 martop10"><b>Which of the following roles best describes your role in the company?</b></p>
+				<div class="answerWrapper">
+				  <div class="leftQ">
+					<div class="checkbox"><input type="radio" name="age" class="input" value="under"></div> <p class="inline-block marbot10">CEO</p><br>
+					<div class="checkbox"><input type="radio" name="age" class="input" value="25"></div> <p class="inline-block marbot10">CTO</p>
+				  </div>
+				  <div class="rightQ">
+					<div class="checkbox"><input type="radio" name="age" class="input" value="45"></div> <p class="inline-block marbot10">Lead Engineer</p><br>
+					<div class="checkbox"><input type="radio" name="age" class="input" value="65"></div> <p class="inline-block marbot10">Other</p>
+				</div>
+			</div>
+			</div>
+			<div class="question-div" id="question3">
+				<p class="ques-num">3 of 4</p>
+				<p class="marbot25 martop10"><b>Which of the following roles best describes the way you currently handle your DevOps/SRE needs?</b></p>
+				<div class="answerWrapper">
+				  <div class="leftQ">
+					<div class="checkbox"><input type="radio" name="concern" class="input" value="lines"></div> <p class="inline-block marbot10">In-house</p><br>
+					<div class="checkbox"><input type="radio" name="concern" class="input" value="dry"></div> <p class="inline-block marbot10">Outsource</p>
+				  </div>
+				  <div class="rightQ">
+					<div class="checkbox"><input type="radio" name="concern" class="input" value="crepey"></div> <p class="inline-block marbot10">A little bit of both</p><br>
+					<div class="checkbox"><input type="radio" name="concern" class="input" value="sun"></div> <p class="inline-block marbot10">I'm not really sure</p>
+				  </div>
+				</div>
+			</div>
+			<div class="question-div" id="question4">
+				<p class="ques-num">4 of 4</p>
+				<p class="marbot25 martop10"><b>Which of the following roles best describes your DevOps/SRE needs?</b></p>
+				<div class="answerWrapper">
+				  <div class="leftQ">
+					<div class="checkbox"><img src="img/curved-orange-check.png" class="orange-check" alt=""><input type="radio" name="issues" class="input" value="arms"></div> <p class="inline-block marbot10">Hosting</p><br>
+					<div class="checkbox"><img src="img/curved-orange-check.png" class="orange-check" alt=""><input type="radio" name="issues" class="input" value="neck"></div> <p class="inline-block marbot10">Better speed</p>
+				 </div>
+				 <div class="rightQ">
+					<div class="checkbox"><img src="img/curved-orange-check.png" class="orange-check" alt=""><input type="radio" name="issues" class="input" value="chest"></div> <p class="inline-block marbot10">Efficiency</p><br>
+					<div class="checkbox"><img src="img/curved-orange-check.png" class="orange-check" alt=""><input type="radio" name="issues" class="input" value="hands"></div> <p class="inline-block marbot10">Other</p>
+				 </div>
+				</div>
+				<div class="CTA">SUBMIT</div>
+			</div>
+				<div class="overlayResults">
+				   <div class="container relative">
+				   	<p>You're just one simple step away from saving big time on your DevOps/SRE spend!<br><br> Please fill out the form below and we will get back to you ASAP and show you how to save big time <b>WITHOUT</b> losing a millisecond of efficiency!</p>
+				   	<form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="formField">
+						<!-- Name -->
+						<input type="text" name="name" class="inputField" placeholder="Name" /><br/>
+						<!-- Email field (required) -->
+						<input type="text" name="email" class="inputField" placeholder="Email" /><br/>
+						<input name="custom_company" class="inputField" type="text" value="" placeholder="Company" /><br/>
+						<!-- List token -->
+						<!-- Get the token at: https://app.getresponse.com/campaign_list.html -->
+						<input type="hidden" name="campaign_token" value="rYtZ7" />
+						<!-- Subscriber button -->
+						<input type="submit" value="Submit" class="submitButton" />
+					</form>
+				   </div>
+			  </div> <!-- end of row and overlayResults -->
+		</div> 
+
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/myJquery.js"></script>
+	</body>
+	</html>

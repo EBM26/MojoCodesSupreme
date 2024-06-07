@@ -1,18 +1,33 @@
-   $(document).ready(function() {
+      $(document).ready(function() {
 
-    $(".smallPic1").click(function() {
-         $(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9973/src/6ed9cb3c0c5f4c17b006b2a559aa7a02_1.jpg");
+     $(".colorIcon").click(function() {
+          if ($(this).hasClass("bambooIcon")) {
+               $(".selectSec").hide();
+               $(".colorIcon").removeClass("activeIcon");
+               $(".prodcutImage img").attr("src","https://mojonow.blob.core.windows.net/cmr/t12053/src/80c4f77e7546401eb926ce93a28c0dc1_1.jpg");
+               $(".bambooSelect").css("display", "flex");
+               $(this).addClass("activeIcon");
+               $(".difText").html("Bamboo");
+          }
 
-    });
+          else if ($(this).hasClass("walnutIcon")) {
+               $(".colorIcon").removeClass("activeIcon");
+               $(".selectSec").hide();
+               $(".prodcutImage img").attr("src","https://mojonow.blob.core.windows.net/cmr/t12053/src/6334dbc955834ecd997be8e2e1312c2c_1.jpg");
+               $(".walnutSelect").css("display", "flex");
+               $(this).addClass("activeIcon");
+               $(".difText").html("Walnut");
+          }
 
-    $(".smallPic2").click(function() {
-         $(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9973/src/bbaef91000944c08ac5895f9d0b50bce_1.jpg");
-
-    });
-    
-    $(".smallPic3").click(function() {
-         $(".bigPic img").attr("src","https://mojonow.blob.core.windows.net/cmr/t9973/src/a5fc172e305643e4aff66bfd698c39a6_1.jpg");
-
-    });
+          else  {
+               $(".colorIcon").removeClass("activeIcon");
+               $(".selectSec").hide();
+               $(".prodcutImage img").attr("src","https://mojonow.blob.core.windows.net/cmr/t12053/src/bcb88516a2d44b608ada9ac187231c9b_1.jpg");
+               $(".marbleSelect").css("display", "flex");
+               $(this).addClass("activeIcon");
+               $(".difText").html("Marble");
+          }
+     });
             
 });
+
